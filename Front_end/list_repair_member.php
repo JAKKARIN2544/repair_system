@@ -14,7 +14,7 @@ include "../Include/member/menu_member.php";
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">แจ้งซ่อม</li>
+                        <li class="breadcrumb-item active">รายการซ่อม</li>
                     </ol>
                 </div>
             </div>

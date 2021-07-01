@@ -79,8 +79,7 @@
 
   .footer {
     text-align: center;
-    background-color: #343a40;
-    color: #FFFFFF;
+    
   }
 
   .href {
@@ -144,6 +143,22 @@
   .aa1 {
     font-size: 12px;
   }
+
+  .main-header{
+    height: 80px;
+    font-size: 18px;
+  }
+
+  .brand-text{
+    font-family: 'Mitr', sans-serif;
+    font-weight: bold;
+  }
+
+  .content-wrapper{
+    background-color: #E3F0FE;
+  }
+
+  
 </style>
 
 <!-- Preloader -->

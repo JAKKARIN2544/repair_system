@@ -151,6 +151,9 @@
   .aa1 {
     font-size: 12px;
   }
+  .card1{
+      text-align: center;
+  }
 </style>
 
 <!-- Preloader -->

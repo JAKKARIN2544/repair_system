@@ -32,7 +32,7 @@
 <!-- AdminLTE App -->
 <script src="../src/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../src/dist/js/demo.js"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 </body>
 </html>
