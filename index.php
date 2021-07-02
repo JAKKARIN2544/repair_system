@@ -85,7 +85,7 @@ include "Include/member/menu_member.php";
                                 <br>
                                 <div class="row text-center">
                                     <div class="col-sm-6">
-                                        <a href="Front_end/index_member.php">
+                                        <a href="index.php">
                                             <img src="src/dist/img/home.png" alt="" width="150" height="145">
                                             <div>
                                                 <h1>หน้าหลัก</h1>

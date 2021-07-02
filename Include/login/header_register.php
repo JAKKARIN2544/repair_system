@@ -27,11 +27,15 @@
 </div>
 
 <style>
-
+  .register-box{
+    width: 760px;
+  }
+  .register-page{
+    font-family: 'Mitr', sans-serif;
+  }
   .error {
     font-family: 'Mitr', sans-serif;
     font-size: 13px;
-    text-align: right;
   }
 
   .login-box-msg {

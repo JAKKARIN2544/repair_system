@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../src/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../src/dist/css/adminlte.min.css">
-  <link rel="icon" href="src/dist/img/repair_systemLogo.png">
+  <link rel="icon" href="../src/dist/img/repair_systemLogo.png">
 </head>
 <div class="preloader flex-column justify-content-center align-items-center">
   <img class="animation__shake" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="60" width="60">

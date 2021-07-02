@@ -84,7 +84,7 @@ include '../sql/session.php';
                 </div>
                 <div class="online "> <i class="fas fa-circle"></i> online</div>
                 <div class="username">
-                    <i class="hi">Hi.</i> <a class="hi2 text-warning" href="#"> <?php echo  $_SESSION['username']; ?></a>
+                    <i class="hi">Hi.</i> <a class="hi2 text-warning" href="#"> <?php echo  $_SESSION['name']; ?></a>
                 </div>
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 </div>
@@ -169,7 +169,7 @@ include '../sql/session.php';
                             <a href="../Back_end/list_repair.php" class="nav-link">
                                 <i class="f2 nav-icon fas fa-wrench"></i>
                                 <p>
-                                    จัดการ รายการซ่อม
+                                    รายการซ่อม
                                 </p>
                             </a>
                         </li>
