@@ -91,7 +91,7 @@
                 <div class="icheck-primary">
                   <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                   <label for="agreeTerms">
-                    I agree to the <a href="#">terms</a>
+                   ฉันยอมรับ <a href="#">เงื่อนไข</a>
                   </label>
                 </div>
               </div>

@@ -25,11 +25,14 @@ include "../Include/member/menu_member2.php";
                 <div class="col-lg-12">
                     <div class="card">
                         <br>
+                        <div class="container">
                         <div class="alert alert-warning alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <h3 class="text-center"><i class="icon fas fa-exclamation-triangle"></i>คำเตือน!</h3>
                             <p class="text-center">กรุณากรอกข้อมูล ในฟอร์มให้ถูกต้อง และตรวจสอบความถูกต้อง ก่อนกดยืนยัน !!!.</ย>
                         </div>
+                        </div>
+                        
                         <form action="" method="POST">
                             <div class="card-body">
                                 <div class="form-group">

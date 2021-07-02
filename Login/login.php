@@ -8,7 +8,7 @@
       <a href="index.php" class="h3 text-dark text-center"><img class="img" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="50" width="50"> <b class="rainbow rainbow_text_animated">REPAIR</b> SYSTEM</a>
       <div class="card-body">
         <div class="login-box-msg text-dark"><span class="icon fas fa-exclamation-triangle"></span> กรุณา LOGIN ก่อนเข้าใช้งาน</div>
-        <form name="LoginForm" action="sql/check_login.php" onsubmit="return FORMLOGIN()" method="POST">
+        <form name="LoginForm" action="../sql/check_login.php" onsubmit="return FORMLOGIN()" method="POST">
           <div class="error text-danger" id="error-username"></div>
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Username" name="username" id="username">
