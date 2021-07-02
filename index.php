@@ -1,102 +1,134 @@
-<?php include "Include/login/header_login.php"; ?>
+<?php include "Include/member/header_member.php";
+include "Include/member/menu_member.php";
+?>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-sm-6">
 
-<body class="hold-transition login-page">
-  <div class="login-box">
-    <!-- /.login-logo -->
-    <div class="card card-outline card-primary">
-      <br>
-      <a href="index.php" class="h3 text-dark text-center"><img class="img" src="src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="50" width="50"> <b class="rainbow rainbow_text_animated">REPAIR</b> SYSTEM</a>
-      <div class="card-body">
-        <div class="login-box-msg text-dark"><span class="icon fas fa-exclamation-triangle"></span> กรุณา LOGIN ก่อนเข้าใช้งาน</div>
-        <form name="LoginForm" action="sql/check_login.php" onsubmit="return FORMLOGIN()" method="POST">
-          <div class="error text-danger" id="error-username"></div>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" name="username" id="username">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-user"></span>
-              </div>
-            </div>
-          </div>
-          <div class="error text-danger" id="error-password"></div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
-            <div class="input-group-append">
-              <div class="input-group-text ">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-8">
-              <div class="icheck-primary">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">
-                  Remember Me
-                </label>
-              </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-4">
-              <button type="submit" name="submit" class="btn btn-success btn-block">เข้าสู่ระบบ</button>
-            </div>
-            <!-- /.col -->
-          </div>
-        </form>
-        <div class="social-auth-links text-center mt-2 mb-3">
+                </div><!-- /.col -->
+                <div class="col-sm-6">
 
-        </div>
-        <!-- /.social-auth-links -->
-
-        <p class="mb-1">
-          <a href="forgot-password.html">ลืมรหัสผ่าน ?</a>
-        </p>
-        <p class="mb-0">
-          <a href="register.php" class="text-center">สมัครสมาชิก</a>
-        </p>
-      </div>
-      <!-- /.card-body -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
     </div>
-    <!-- /.card -->
-  </div>
-  <!-- /.login-box -->
-  <script>
-    const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
-    togglePassword.addEventListener('click', function(e) {
-      // toggle the type attribute
-      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-      password.setAttribute('type', type);
-      // toggle the eye / eye slash icon
-      this.classList.toggle('bi-eye');
-    });
-  </script>
-  <script>
-    function FORMLOGIN() {
-      var username = document.forms["LoginForm"]["username"];
-      var password = document.forms["LoginForm"]["password"];
+    <!-- /.content-header -->
 
-      if (username.value == "") {
-        document.getElementById("error-username").innerHTML = "<span>กรุณากรอก Username</span>";
-        username.className = 'form-control is-invalid';
-        username.focus();
-        return false;
-      } else {
-        document.getElementById("error-username").innerHTML = "<span></span>";
-        username.className = 'form-control is-valid';
-      }
+    <!-- Main content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <br>
+                            <?php
+					            if(!isset($_SESSION["username"])){ //ถ้ายังไม่ได้ Login จะโชว์สองลิงค์ด้านล่าง
+                            ?>
+                            <h1 class="text-center">กรุณา <a class="text-danger" href="Login/login.php">ล็อกอิน</a> ก่อนเข้าใช้งาน !!!</a></h1>
+                            <?php
+                            }else{
+                            echo '<h1 class="text-center">ยินดีต้อนรับ คุณ. <a class="text-warning" href="">' . $_SESSION['name'] . '</a></h1> ';
+                            }
+                            ?> 
+                            <br>
+                            <p class="card-text">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <ul class="carousel-indicators">
+                                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo" data-slide-to="1"></li>
+                                    <li data-target="#demo" data-slide-to="2"></li>
+                                </ul>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="src/dist/img/banner_one.png" alt="" width="1100" height="300">
 
-      if (password.value == "") {
-        document.getElementById("error-password").innerHTML = "<span>กรุณากรอก Password</span>";
-        password.className = 'form-control is-invalid';
-        password.focus();
-        return false;
-      } else {
-        document.getElementById("error-password").innerHTML = "<span></span>";
-        password.className = 'form-control is-valid';
-      }
-      return true;
-    }
-  </script>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/dist/img/banner_two.png" alt="" width="1100" height="300">
 
-  <?php include "Include/login/footer_login.php"; ?>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/dist/img/banner_three.png" alt="" width="1100" height="300">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                            </p>
+                            <br>
+                            <div class="container">
+                                <div class="">
+                                    <div class="text-center h3">ค้นหารายการ</div>
+                                    <div class="row">
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-10">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control form-control-lg" placeholder="ค้นหา">
+                                                <div class="input-group-append">
+                                                    <button type="submit" class="btn btn-lg btn-default">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row text-center">
+                                    <div class="col-sm-6">
+                                        <a href="Front_end/index_member.php">
+                                            <img src="src/dist/img/home.png" alt="" width="150" height="145">
+                                            <div>
+                                                <h1>หน้าหลัก</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="Front_end/form_repair.php">
+                                            <img src="src/dist/img/form.png" alt="" width="140" height="147">
+                                            <div>
+                                                <h1>แจ้งซ่อม</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row text-center">
+                                    <div class="col-sm-6">
+                                        <a href="Front_end/list_repair_member.php">
+                                            <img src="src/dist/img/list.png" alt="" width="140" height="147">
+                                            <div>
+                                                <h1>รายการซ่อม</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="Front_end/follow_up_repair.php">
+                                        <img src="src/dist/img/follow.png" alt="" width="140" height="147">
+                                        <div>
+                                            <h1>ติดตามการซ่อม</h1>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <?php include "Include/member/footer_member.php"; ?>

@@ -20,7 +20,8 @@
       $row = mysqli_fetch_array($result);
 
       $_SESSION["id"] = $row["id"];
-      $_SESSION["username"] = $row["fname"] . " " . $row["lname"];
+      $_SESSION["username"] = $row["username"];
+      $_SESSION["name"] = $row["fname"] . " " . $row["lname"];
       $_SESSION["level"] = $row["level"];
       //------------------------------------------------ ADMIN -----------------------------------------------------------------------
       if ($_SESSION["level"] == "admin") {
@@ -52,7 +53,7 @@
                     timer: 3000
                 }).then((result) => {
             if (result.isDismissed) {
-                window.location.href = "../Front_end/index_member.php";
+                window.location.href = "../index.php";
             }
           });
         </script>';

@@ -14,16 +14,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="src/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="src/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="../src/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Theme style -->
-  <link rel="stylesheet" href="src/dist/css/adminlte.min.css">
-  <link rel="icon" href="src/dist/img/repair_systemLogo.png">
+  <link rel="stylesheet" href="../src/dist/css/adminlte.min.css">
+  <link rel="icon" href="../src/dist/img/repair_systemLogo.png">
 </head>
 <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__shake" src="src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="60" width="60">
+  <img class="animation__shake" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="60" width="60">
 </div>
 
 <style>

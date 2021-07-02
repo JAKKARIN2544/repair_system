@@ -1,5 +1,5 @@
-<?php include 'sql/conn.php';
-include 'sql/session.php';
+<?php include '../sql/conn.php';
+include '../sql/session.php';
 ?>
 
 <body class="hold-transition layout-top-nav">
@@ -9,7 +9,7 @@ include 'sql/session.php';
         <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
             <div class="container">
                 <a href="" class="navbar-logo navbar-brand">
-                    <img src="src/dist/img/repair_systemLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <img src="../src/dist/img/repair_systemLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                     <span class="brand-text font-weight-light">REPAIR SYSTEM</span>
                 </a>
 
@@ -21,16 +21,16 @@ include 'sql/session.php';
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="Front_end/index_member.php" class="nav-link">หน้าหลัก</a>
+                            <a href="../index.php" class="nav-link">หน้าหลัก</a>
                         </li>
                         <li class="nav-item">
-                            <a href="Front_end/form_repair.php" class="nav-link">แจ้งซ่อม</a>
+                            <a href="../Front_end/form_repair.php" class="nav-link">แจ้งซ่อม</a>
                         </li>
                         <li class="nav-item">
-                            <a href="Front_end/list_repair_member.php" class="nav-link">รายการซ่อม</a>
+                            <a href="../Front_end/list_repair_member.php" class="nav-link">รายการซ่อม</a>
                         </li>
                         <li class="nav-item">
-                            <a href="Front_end/follow_up_repair.php" class="nav-link">ติดตามการซ่อม</a>
+                            <a href="../Front_end/follow_up_repair.php" class="nav-link">ติดตามการซ่อม</a>
                         </li>
                     </ul>
                 </div>
@@ -47,11 +47,11 @@ include 'sql/session.php';
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                             
                             <div class="dropdown-divider"></div>
-                            <a href="Login/login.php" class="dropdown-item">
+                            <a href="../Login/login.php" class="dropdown-item">
                                 <i class="fas-icon fas fa-users-cog mr-2"></i>เข้าสู่ระบบ
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="Login/register.php" class="dropdown-item">
+                            <a href="../Login/register.php" class="dropdown-item">
                                 <i class="fas-icon fas fa-unlock-alt mr-2"></i>สมัครสมาชิก
                             </a>
                         </div>
