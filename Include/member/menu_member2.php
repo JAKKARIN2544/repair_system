@@ -1,5 +1,4 @@
 <?php include '../sql/conn.php';
-include '../sql/session.php';
 ?>
 
 <body class="hold-transition layout-top-nav">
@@ -31,6 +30,9 @@ include '../sql/session.php';
                         </li>
                         <li class="nav-item">
                             <a href="../Front_end/follow_up_repair.php" class="nav-link">ติดตามการซ่อม</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../Front_end/help.php" class="nav-link">วิธีใช้งาน</a>
                         </li>
                     </ul>
                 </div>
@@ -79,7 +81,7 @@ include '../sql/session.php';
                         echo ' <i class=" fas-icon fas fa-cogs mr-2"></i> Settings';
                         echo ' </a>';
                         echo ' <div class="dropdown-divider"></div>';
-                        echo ' <a href="sql/logout.php" class="dropdown-item dropdown-footer text-danger"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>';
+                        echo ' <a href="../sql/logout.php" class="dropdown-item dropdown-footer text-danger"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>';
                         echo ' </div>';
                         echo ' </li>';
                         echo ' </ul>';

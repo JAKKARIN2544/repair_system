@@ -1,3 +1,6 @@
+<?php session_start(); 
+        include("conn.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +10,7 @@
 
 <body>
   <?php
-  session_start();
   if (isset($_POST['username'])) {
-    include("conn.php");
     $username = $_POST['username'];
     $password = MD5($_POST['password']);
 
@@ -24,7 +25,7 @@
       $_SESSION["name"] = $row["fname"] . " " . $row["lname"];
       $_SESSION["level"] = $row["level"];
       //------------------------------------------------ ADMIN -----------------------------------------------------------------------
-      if ($_SESSION["level"] == "admin") {
+      if (isset($_SESSION["level"]) == "admin") {
         echo '
         <script type="text/javascript">
                 Swal.fire({
@@ -71,7 +72,7 @@
                     timer: 3000
                 }).then((result) => {
             if (result.isDismissed) {
-                window.location.href = "../index.php";
+                window.location.href = "../Login/login.php";
             }
           });
         </script>';
@@ -89,7 +90,7 @@
                     timer: 3000
                 }).then((result) => {
             if (result.isDismissed) {
-                window.location.href = "../index.php";
+                window.location.href = "../Login/login.php";
             }
           });
         </script>';

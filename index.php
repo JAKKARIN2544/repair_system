@@ -1,4 +1,5 @@
-<?php include "Include/member/header_member.php";
+<?php  session_start();
+include "Include/member/header_member.php";
 include "Include/member/menu_member.php";
 ?>
 <div class="content-wrapper">

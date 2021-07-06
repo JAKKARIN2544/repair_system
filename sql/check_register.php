@@ -1,3 +1,4 @@
+<?php  include "conn.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +8,7 @@
 
 <body>
   <?php
-  include "conn.php";
-  $id           =   $_POST['id'];
+  $id      =   rand(100000,999999);
   $email        =   $_POST['email'];
   $username     =   $_POST['username'];
   $password1    =   MD5($_POST['password1']);
@@ -17,21 +17,20 @@
   $sex          =   $_POST['sex'];
   $phone        =   $_POST['phone'];
   $address      =   $_POST['address'];
-  $level        =   $_POST['level'];
-
-  $sql = "INSERT INTO tb_user VALUE ('$id','$email','$username','$password1','$fname','$lname','$sex','$phone','$address','member')";
+  $level        =   "member";
+  $sql = "INSERT INTO tb_user VALUE ('MB$id','$email','$username','$password1','$fname','$lname','$sex','$phone','$address','$level')";
   if (mysqli_query($conn, $sql)) {
     echo '
         <script type="text/javascript">
                 Swal.fire({
-                    icon: "success",
+                    icon: "success",                    
                     title: "สำเร็จ",
                     text: "สมัครสมาชิก สำเร็จ",
                     showConfirmButton: false,
                     timer: 3000
                 }).then((result) => {
             if (result.isDismissed) {
-                window.location.href = "../index.php";
+                window.location.href = "../Login/login.php";
             }
           });
         </script>';
@@ -46,7 +45,7 @@
                     timer: 3000
                 }).then((result) => {
             if (result.isDismissed) {
-                window.location.href = "../register.php";
+                window.location.href = "../Login/register.php";
             }
           });
         </script>';

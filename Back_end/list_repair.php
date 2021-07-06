@@ -51,7 +51,7 @@ include "../Include/admin/menu_admin.php"
                                         <td class="text-center">
                                             <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
                                             <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-print"></i> พิมพ์</a>
-                                           
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -63,7 +63,7 @@ include "../Include/admin/menu_admin.php"
                                         <td class="text-center">
                                             <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
                                             <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-print"></i> พิมพ์</a>
-                                           
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -75,7 +75,7 @@ include "../Include/admin/menu_admin.php"
                                         <td class="text-center">
                                             <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
                                             <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-print"></i> พิมพ์</a>
-                                           
+
                                         </td>
                                     </tr>
                                 </tbody>

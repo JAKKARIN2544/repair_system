@@ -1,5 +1,4 @@
 <?php include 'sql/conn.php';
-include 'sql/session.php';
 ?>
 
 <body class="hold-transition layout-top-nav">
@@ -31,6 +30,9 @@ include 'sql/session.php';
                         </li>
                         <li class="nav-item">
                             <a href="Front_end/follow_up_repair.php" class="nav-link">ติดตามการซ่อม</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Front_end/help.php" class="nav-link">วิธีใช้งาน</a>
                         </li>
                     </ul>
                 </div>

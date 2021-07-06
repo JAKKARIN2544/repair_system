@@ -1,6 +1,5 @@
 <?php include '../sql/conn.php';
 include '../sql/check_session.php';
-include '../sql/session.php';
 ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">

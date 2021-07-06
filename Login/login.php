@@ -5,7 +5,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
       <br>
-      <a href="index.php" class="h3 text-dark text-center"><img class="img" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="50" width="50"> <b class="rainbow rainbow_text_animated">REPAIR</b> SYSTEM</a>
+      <a href="../Login/login.php" class="h3 text-dark text-center"><img class="img" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="50" width="50"> <b class="rainbow rainbow_text_animated">REPAIR</b> SYSTEM</a>
       <div class="card-body">
         <div class="login-box-msg text-dark"><span class="icon fas fa-exclamation-triangle"></span> กรุณา LOGIN ก่อนเข้าใช้งาน</div>
         <form name="LoginForm" action="../sql/check_login.php" onsubmit="return FORMLOGIN()" method="POST">
