@@ -1,4 +1,4 @@
-<?php  include "conn.php"; ?>
+<?php include "conn.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +8,13 @@
 
 <body>
   <?php
-  $id      =   rand(100000,999999);
+  $housenumber  =   $_POST['housenumber'];
+  $moo          =   $_POST['moo'] ;
+  $provinces    =   $_POST['provinces']  ;
+  $amphures     =   $_POST['amphures']  ;
+  $districts    =   $_POST['districts']  ;
+  $zipcode      =   $_POST['zipcode'];
+  $id           =   rand(100000, 999999);
   $email        =   $_POST['email'];
   $username     =   $_POST['username'];
   $password1    =   MD5($_POST['password1']);
@@ -16,9 +22,10 @@
   $lname        =   $_POST['lname'];
   $sex          =   $_POST['sex'];
   $phone        =   $_POST['phone'];
-  $address      =   $_POST['address'];
+  //$address      =   $_POST['address'];
   $level        =   "member";
-  $sql = "INSERT INTO tb_user VALUE ('MB$id','$email','$username','$password1','$fname','$lname','$sex','$phone','$address','$level')";
+  $sql = "INSERT INTO tb_user VALUE ('MB$id','$email','$username','$password1','$fname','$lname','$sex','$phone','$housenumber',
+                                      '$moo','$provinces','$amphures','$districts','$zipcode','$level')";
   if (mysqli_query($conn, $sql)) {
     echo '
         <script type="text/javascript">

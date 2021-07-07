@@ -1,3 +1,4 @@
+<script src="../src/plugins/bs-stepper/js/bs-stepper.min.js"></script>
 <!-- jQuery -->
 <script src="../src/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->

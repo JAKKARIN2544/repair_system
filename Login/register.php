@@ -1,27 +1,41 @@
 <?php include "../Include/login/header_register.php"; ?>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "12345678";
+$dbname = "db_repair_system";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+$sql_provinces = "SELECT * FROM provinces";
+$query = mysqli_query($conn, $sql_provinces);
+?>
 
 <body class="hold-transition register-page">
   <div class="register-box">
     <div class="card card-outline card-primary">
       <a href="./Login/register.php" class="h3 text-dark text-center"><img class="img" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="50" width="50"> <b class="rainbow rainbow_text_animated">REPAIR</b> SYSTEM</a>
       <div class="card-body">
-        <div class="login-box-msg text-dark"><span class="icon fas fa-exclamation-triangle"></span> กรุณา LOGIN ก่อนเข้าใช้งาน</div>
+      <div class="login-box-msg text-dark"><span class="icon fas fa-exclamation-triangle"></span> กรุณา สมัครสมาชิก ก่อนเข้าใช้งาน <a class="text-danger">!!!!!</a></div>
         <div class="container">
           <form name="RegisterForm" action="../sql/check_register.php" onsubmit="return FORMREGISTER()" method="POST">
 
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputemail">E-mail</label>
+                <label for=""></label>
                   <span class="error" id="error-email"></span>
                   <input type="text" class="form-control form-control-border border-width-2" placeholder="Email" name="email" id="email">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputusername">ชื่อผู้ใช้งาน</label>
+                <label for=""></label>
                   <span class="error" id="error-username"></span>
-                  <input type="text" class="form-control form-control-border border-width-2" placeholder="Username" name="username" id="username">
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="ชื่อผู้ใช้งาน (ภาษาอังกฤษเท่านั้น a-z,A-Z,1-0)" name="username" id="username">
                 </div>
               </div>
             </div>
@@ -29,16 +43,18 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputpassword1">รหัสผ่าน</label>
+                <label for=""></label>
                   <span class="error" id="error-password1"></span>
-                  <input type="password" class="form-control form-control-border border-width-2" placeholder="Password" name="password1" id="password1">
+                  <input type="password" class="form-control form-control-border border-width-2" placeholder="รหัสผ่าน" name="password1" id="password1">
+                  <div class="text-right"><span id="toggle_pwd1" class="fas fa-eye"><a class="span1">  show Passowrd</a></span></div>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputpassword2">ยืนยัน รหัสผ่าน</label>
+                <label for=""></label>
                   <span class="error" id="error-password2"></span>
-                  <input type="password" class="form-control form-control-border border-width-2" placeholder="Confrim Password" name="password2" id="password2">
+                  <input type="password" class="form-control form-control-border border-width-2" placeholder="ยืนยัน รหัสผ่าน" name="password2" id="password2">
+                  <div class="text-right"><span id="toggle_pwd2" class="fas fa-eye"><a class="span1">  show Passowrd</a></span></div>
                 </div>
               </div>
             </div>
@@ -46,16 +62,16 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputfristname">ชื่อจริง</label>
+                <label for=""></label>
                   <span class="error" id="error-fname"></span>
-                  <input type="text" class="form-control form-control-border border-width-2" placeholder="Frist Name" name="fname" id="fname">
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="ชื่อจริง" name="fname" id="fname">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputlastname">นามสกุล</label>
+                <label for=""></label>
                   <span class="error" id="error-lname"></span>
-                  <input type="text" class="form-control form-control-border border-width-2" placeholder="Last Name" name="lname" id="lname">
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="นามสกุล" name="lname" id="lname">
                 </div>
               </div>
             </div>
@@ -64,9 +80,9 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <span class="error" id="error-sex"></span>
-                  <label for="exampleInputlastname">เพศ</label>
+                  <label for=""></label>
                   <select class="custom-select form-control-border border-width-2" name="sex" id="sex">
-                    <option value="" disabled selected hidden>Sex...</option>
+                    <option value="" disabled selected hidden>เพศ</option>
                     <option>ชาย</option>
                     <option>หญิง</option>
                     <option>ไม่ระบุ</option>
@@ -75,23 +91,70 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputphone">เบอร์โทรศัพท์</label>
+                <label for=""></label>
                   <span class="error" id="error-phone"></span>
-                  <input type="text" class="form-control form-control-border border-width-2" placeholder="Phone Number" name="phone" id="phone">
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="เบอร์โทรศัพท์" name="phone" id="phone">
                 </div>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputaddress">ที่อยู่</label>
-              <textarea class="form-control form-control-border border-width-2" rows="2" placeholder="Address" name="address" id="address"></textarea>
+            <div class="row">
+              <div class="col-3">
+                <div class="form-group">
+                <label for=""></label>
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="บ้านเลขที่" name="housenumber" id="housenumber">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group">
+                <label for=""></label>
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="หมู่" name="moo" id="moo">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                <label for=""></label>
+                  <select class="custom-select form-control-border border-width-2" name="provinces" id="provinces">
+                    <option value="" disabled selected hidden>เลือก จังหวัด</option>
+                    <?php foreach ($query as $value) { ?>
+                      <option value="<?= $value['id'] ?>"><?= $value['name_th'] ?></option>
+                    <?php } ?>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                <label for=""></label>
+                  <select class="custom-select form-control-border border-width-2" name="amphures" id="amphures">
+                  <option value="" disabled selected hidden>เลือก อำเภอ</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                <label for=""></label>
+                  <select class="custom-select form-control-border border-width-2" name="districts" id="districts">
+                  <option value="" disabled selected hidden>เลือก ตำบล</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <div class="form-group">
+                <label for=""></label>
+                  <input type="text" class="form-control form-control-border border-width-2" name="zipcode" id="zip_code" placeholder="รหัสไปรษณีย์">
+                </div>
+              </div>
             </div>
             <div class="row">
               <div class="col-8">
                 <div class="icheck-primary">
                   <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                   <label for="agreeTerms">
-                   ฉันยอมรับ <a href="#">เงื่อนไข</a>
+                    ฉันยอมรับ <a href="#">เงื่อนไข</a>
                   </label>
                 </div>
               </div>
@@ -109,6 +172,27 @@
     </div><!-- /.card -->
   </div>
   <!-- /.register-box -->
+  <?php include "../Include/login/footer_register.php"; ?>
+  <?php include "../src/script/script.php"; ?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $("#toggle_pwd1").click(function() {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var type = $(this).hasClass("fa-eye-slash") ? "text" : "password";
+        $("[id*=password1]").attr("type", type);
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(function() {
+      $("#toggle_pwd2").click(function() {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var type = $(this).hasClass("fa-eye-slash") ? "text" : "password";
+        $("[id*=password2]").attr("type", type);
+      });
+    });
+  </script>
   <script>
     function FORMREGISTER() {
       var email = document.forms["RegisterForm"]["email"];
@@ -265,4 +349,3 @@
       }
     }
   </script>
-  <?php include "../Include/login/footer_register.php"; ?>

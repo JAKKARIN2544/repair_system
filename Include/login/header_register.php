@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/plugins/bs-stepper/css/bs-stepper.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../src/plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
@@ -27,6 +28,10 @@
 </div>
 
 <style>
+   .span1{
+    font-family: 'Mitr', sans-serif;
+    font-size: 12px;
+    }
   .register-box{
     width: 760px;
   }

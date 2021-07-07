@@ -11,7 +11,7 @@
         <form name="LoginForm" action="../sql/check_login.php" onsubmit="return FORMLOGIN()" method="POST">
           <div class="error text-danger" id="error-username"></div>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" name="username" id="username">
+            <input type="text" class="form-control form-control-border border-width-2" placeholder="Username" name="username" id="username">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
@@ -20,10 +20,10 @@
           </div>
           <div class="error text-danger" id="error-password"></div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+            <input type="password" class="form-control form-control-border border-width-2" placeholder="Password" name="password" id="password">
             <div class="input-group-append">
               <div class="input-group-text ">
-                <span class="fas fa-lock"></span>
+                <span id="toggle_pwd" class="fas fa-eye"></span>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               <div class="icheck-primary">
                 <input type="checkbox" id="remember" name="remember">
                 <label for="remember">
-                  Remember Me
+                  จดจำผู้ใช้งาน
                 </label>
               </div>
             </div>
@@ -60,15 +60,15 @@
     <!-- /.card -->
   </div>
   <!-- /.login-box -->
-  <script>
-    const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#password');
-    togglePassword.addEventListener('click', function(e) {
-      // toggle the type attribute
-      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-      password.setAttribute('type', type);
-      // toggle the eye / eye slash icon
-      this.classList.toggle('bi-eye');
+  <?php include "../Include/login/footer_login.php"; ?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $("#toggle_pwd").click(function() {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var type = $(this).hasClass("fa-eye-slash") ? "text" : "password";
+        $("[id*=password]").attr("type", type);
+      });
     });
   </script>
   <script>
@@ -78,25 +78,23 @@
 
       if (username.value == "") {
         document.getElementById("error-username").innerHTML = "<span>กรุณากรอก Username</span>";
-        username.className = 'form-control is-invalid';
+        username.className = 'form-control form-control-border border-width-2 is-invalid';
         username.focus();
         return false;
       } else {
         document.getElementById("error-username").innerHTML = "<span></span>";
-        username.className = 'form-control is-valid';
+        username.className = 'form-control form-control-border border-width-2 is-valid';
       }
 
       if (password.value == "") {
         document.getElementById("error-password").innerHTML = "<span>กรุณากรอก Password</span>";
-        password.className = 'form-control is-invalid';
+        password.className = 'form-control form-control-border border-width-2 is-invalid';
         password.focus();
         return false;
       } else {
         document.getElementById("error-password").innerHTML = "<span></span>";
-        password.className = 'form-control is-valid';
+        password.className = 'form-control form-control-border border-width-2 is-valid';
       }
       return true;
     }
   </script>
-
-  <?php include "../Include/login/footer_login.php"; ?>

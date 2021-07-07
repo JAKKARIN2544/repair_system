@@ -121,4 +121,9 @@
       transform: rotate(359deg);
     }
   }
+  .input-group-text{
+    background-color: white;
+    border-color: white;
+
+  }
 </style>
