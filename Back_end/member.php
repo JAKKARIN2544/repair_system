@@ -3,9 +3,9 @@ include "../Include/admin/menu_admin.php";
 ?>
 <?php
 $servername = "localhost";
-$username = "id17179794_test_systemrepair";
-$password = "i4lX[BWVkzy@v38f";
-$dbname = "id17179794_test_system";
+$username = "root";
+$password = "12345678";
+$dbname = "db_repair_system";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
