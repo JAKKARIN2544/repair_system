@@ -1,6 +1,3 @@
-<?php include 'sql/conn.php';
-?>
-
 <body class="hold-transition layout-top-nav">
     <div class="wrapper">
 
@@ -20,7 +17,7 @@
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="Front_end/index_member.php" class="nav-link">หน้าหลัก</a>
+                            <a href="index.php" class="nav-link">หน้าหลัก</a>
                         </li>
                         <li class="nav-item">
                             <a href="Front_end/form_repair.php" class="nav-link">แจ้งซ่อม</a>

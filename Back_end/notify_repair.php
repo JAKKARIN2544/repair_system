@@ -62,35 +62,96 @@ include "../Include/admin/menu_admin.php"
                                                     <td>@mdo</td>
                                                     <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
                                                     <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
                                                         <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
                                                         <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Jacob</td>
-                                                    <td>tdornton</td>
-                                                    <td>@fat</td>
-                                                    <td class="text-center"> <small class="badge badge-danger">ยกเลิกซ่อม</small></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
                                                     <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
                                                         <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
                                                         <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                    <td class="text-center"><small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
                                                     <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
                                                         <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
                                                         <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center">
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
+                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center">
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
+                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center">
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
+                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center">
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
+                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center">
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-info"></i> รายละเอียด</a>
+                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
+                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
+                                                    </td>
+                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -208,6 +269,35 @@ include "../Include/admin/menu_admin.php"
     </section>
     <!-- /.content -->
 </div>
+<!---------------------------------------------------- modal --------------------------------------------------->
+<div class="modal fade" id="modal-lg">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">รายละเอียด การแจ้งซ่อมของ คุณ.<span class="text-danger"> xxxx  xxxxxx</span></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>รหัสแจ้งซ่อม : <span class="text-danger">RP xxxxxxx</span> </p>
+                <p><span>วันที่แจ้งซ่อม : <span class="text-danger"> not data !!!! </span></span>&nbsp;&nbsp;<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เวลา : <span class="text-danger"> xx:xx</span>&nbsp;&nbsp;น.</span></p>
+                <p>ชื่อ : <span class="text-danger"> not data !!!! </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นามสกุล :<span class="text-danger"> not data !!!! </span></p>
+                <p>เบอร์โทรศัพท์ : <span class="text-danger"> 091-xxxxxxx</span></p>
+                <p>สิ่งของที่ส่งซ่อม : <span class="text-danger">not data !!!! </span></p>
+                <p>อาการชำรุด : <span class="text-danger">not data not data not data not data not data not data not data not data not data not data not data not data not data not data !!!! </span></p>
+                
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!---------------------------------------------------- modal --------------------------------------------------->
 <?php include "../Include/admin/footer_admin.php"; ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
