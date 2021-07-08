@@ -41,6 +41,36 @@ include "../Include/admin/menu_admin.php"
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-one-tabContent">
                                 <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                                    <div class="card-body table-responsive p-0">
+                                        <table class="table table-hover text-nowrap" id="MyTable">
+                                            <thead class="">
+                                                <tr>
+                                                    <th class="text-center" scope="col">รหัสแจ้งซ่อม</th>
+                                                    <th class="text-center" scope="col">ชื่อ - นามสกุล</th>
+                                                    <th class="text-center" scope="col">วันที่แจ้งซ่อม</th>
+                                                    <th class="text-center" scope="col">อาการเสีย ชำรุด</th>
+                                                    <th class="text-center" scope="col">สถานะ</th>
+                                                    <th class="text-center" scope="col">จัดการ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center">
+                                                        <a class="btn1 btn btn-warning" data-toggle="modal" data-target="#modal-xl"><i class="fas fa-info"></i> ดูรายการ</a>
+                                                        <a class="btn1 btn btn-success" href="../Report/print_pick_up_equipment.php" target="_blank"><i class="fas fa-check"></i> พิมพ์รายการ</a>
+                                                        <a class="btn1 btn btn-danger" href="#" target=""><i class="fas fa-times"></i> ลบรายการ</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
                                     <form action="" method="POST">
                                         <div class="card-body">
                                             <div class="form-group">
@@ -136,60 +166,6 @@ include "../Include/admin/menu_admin.php"
                                         </div>
                                     </form>
                                 </div>
-                                <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
-                                    <div class="card-body table-responsive p-0">
-                                        <table class="table table-hover text-nowrap" id="MyTable">
-                                            <thead class="">
-                                                <tr>
-                                                    <th class="text-center" scope="col">รหัสแจ้งซ่อม</th>
-                                                    <th class="text-center" scope="col">ชื่อ - นามสกุล</th>
-                                                    <th class="text-center" scope="col">วันที่แจ้งซ่อม</th>
-                                                    <th class="text-center" scope="col">อาการเสีย ชำรุด</th>
-                                                    <th class="text-center" scope="col">สถานะ</th>
-                                                    <th class="text-center" scope="col">จัดการ</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo(rand(100000,999999)); ?></td>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="../Back_end/list_pick_up_equipment.php" target=""><i class="fas fa-info"></i> ดูรายการ</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> พิมพ์รายการ</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ลบรายการ</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo(rand(100000,999999)); ?></td>
-                                                    <td>Jacob</td>
-                                                    <td>tdornton</td>
-                                                    <td>@fat</td>
-                                                    <td class="text-center"> <small class="badge badge-danger">ยกเลิกซ่อม</small></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="../Back_end/list_pick_up_equipment.php" target=""><i class="fas fa-info"></i> ดูรายการ</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> พิมพ์รายการ</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ลบรายการ</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo(rand(100000,999999)); ?></td>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                    <td class="text-center"><small class="badge badge-success">กำลังซ่อม</small></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="../Back_end/list_pick_up_equipment.php" target=""><i class="fas fa-info"></i> ดูรายการ</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> พิมพ์รายการ</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ลบรายการ</a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <!-- /.card -->
@@ -201,6 +177,33 @@ include "../Include/admin/menu_admin.php"
         <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+</div>
+
+<div class="modal fade" id="modal-xl">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">รายละเอียด การแจ้งซ่อมของ คุณ.<span class="text-danger"> xxxx xxxxxx</span></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>รหัสแจ้งซ่อม : <span class="text-danger">RP xxxxxxx</span> </p>
+                <p><span>วันที่แจ้งซ่อม : <span class="text-danger"> not data !!!! </span></span>&nbsp;&nbsp;<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เวลา : <span class="text-danger"> xx:xx</span>&nbsp;&nbsp;น.</span></p>
+                <p>ชื่อ : <span class="text-danger"> not data !!!! </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นามสกุล :<span class="text-danger"> not data !!!! </span></p>
+                <p>เบอร์โทรศัพท์ : <span class="text-danger"> 091-xxxxxxx</span></p>
+                <p>สิ่งของที่ส่งซ่อม : <span class="text-danger">not data !!!! </span></p>
+                <p>อาการชำรุด : <span class="text-danger">not data not data not data not data not data not data not data not data not data not data not data not data not data not data !!!! </span></p>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div>
 <?php include "../Include/admin/footer_admin.php"; ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>

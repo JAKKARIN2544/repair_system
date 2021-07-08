@@ -98,7 +98,7 @@ include "../Include/admin/menu_admin.php"
               <div class="card-header border-0">
                 <div class="d-flex justify-content-between">
                   <h2 class="card-title text-danger">กราฟรายงาน การซ่อม</h2>
-                  <a href="">View Report</a>
+                  <a href="">View</a>
                 </div>
               </div>
               <div class="card-body">
@@ -121,12 +121,14 @@ include "../Include/admin/menu_admin.php"
                 </div>
 
                 <div class="d-flex flex-row justify-content-end">
-                  <span class="mr-2">
-                    <i class="fas fa-square text-primary"></i> This year
+                <span class="mr-2">
+                    <i class="fas fa-square text-success"></i> รับซ่อม
                   </span>
-
+                  <span class="mr-2">
+                    <i class="fas fa-square text-warning"></i> กำลังซ่อม
+                  </span>
                   <span>
-                    <i class="fas fa-square text-gray"></i> Last year
+                    <i class="fas fa-square text-danger"></i> ยกเลิกซ่อม
                   </span>
                 </div>
               </div>

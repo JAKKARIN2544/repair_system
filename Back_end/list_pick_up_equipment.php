@@ -130,7 +130,7 @@ include "../Include/admin/menu_admin.php"
                         <!-- this row will not appear when printing -->
                         <div class="row no-print">
                             <div class="col-12">
-                                <a href="#" rel="noopener" target="_blank" class="btn btn-warning"><i class="fas fa-backward"></i> ย้อนกลับ</a>
+                                <a href="javascript:history.back()" rel="noopener" class="btn btn-warning"><i class="fas fa-backward"></i> ย้อนกลับ</a>
                                 <button type="button" class="btn btn-success float-right"><i class="fas fa-check"></i> ยืนยันการเบิกอุปกรณ์
                                 </button>
                                 <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">

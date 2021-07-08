@@ -1,7 +1,7 @@
 <?php 
 echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
 
-if (!$_SESSION["username"]) {  //check session
+if (!$_SESSION["id"]) {  //check session
       echo '
         <script type="text/javascript">
                 Swal.fire({
