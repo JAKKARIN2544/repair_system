@@ -8,6 +8,13 @@
 <body>
     <?php
     session_start();
+    unset($_SESSION['id']);
+    unset($_SESSION['username']);
+    unset($_SESSION['name']);
+    unset($_SESSION['level']);
+    unset($_SESSION['tel']);
+    unset($_SESSION['gender']);
+    unset($_SESSION['email']);
     session_destroy();
     echo '
         <script type="text/javascript">

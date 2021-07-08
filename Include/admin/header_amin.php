@@ -155,6 +155,9 @@
   .card1{
       text-align: center;
   }
+  .img5{
+    width: 50%;
+  }
 </style>
 
 <!-- Preloader -->

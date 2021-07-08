@@ -42,7 +42,7 @@ include '../sql/check_session.php';
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <span class="dropdown-item dropdown-header"> จัดการข้อมูลส่วนตัว</span>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
+                        <a href="../Back_end/profile_admin.php" class="dropdown-item">
                             <i class="fas-icon fas fa-users-cog mr-2"></i>โปรไฟล์ Profile
                         </a>
                         <div class="dropdown-divider"></div>
