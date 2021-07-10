@@ -3,6 +3,7 @@ include("conn.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<title>Repair | System</title>
 
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com">

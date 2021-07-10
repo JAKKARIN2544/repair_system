@@ -3,16 +3,17 @@
 <html lang="en">
 
 <head>
+  <title>Repair | System</title>
   <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 </head>
 
 <body>
   <?php
   $housenumber  =   $_POST['housenumber'];
-  $moo          =   $_POST['moo'] ;
-  $provinces    =   $_POST['provinces']  ;
-  $amphures     =   $_POST['amphures']  ;
-  $districts    =   $_POST['districts']  ;
+  $moo          =   $_POST['moo'];
+  $provinces    =   $_POST['provinces'];
+  $amphures     =   $_POST['amphures'];
+  $districts    =   $_POST['districts'];
   $zipcode      =   $_POST['zipcode'];
   $id           =   rand(100000, 999999);
   $email        =   $_POST['email'];

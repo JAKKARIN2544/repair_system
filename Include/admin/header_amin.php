@@ -1,4 +1,9 @@
 <?php session_start(); ?>
+<?php include "../sql/conn.php";
+include "../sql/check_session.php";
+include "../sql/time_out.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,7 +1,3 @@
-<?php include '../sql/conn.php';
-include '../sql/check_session.php';
-?>
-
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <!-- Navbar -->
