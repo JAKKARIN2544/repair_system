@@ -64,14 +64,14 @@ $query = mysqli_query($conn, $sql_provinces);
                 <div class="form-group">
                 <label for=""></label>
                   <span class="error" id="error-fname"></span>
-                  <input type="text" class="form-control form-control-border border-width-2" placeholder="ชื่อจริง" name="fname" id="fname">
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="ชื่อจริง (TH)" name="fname" id="fname">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                 <label for=""></label>
                   <span class="error" id="error-lname"></span>
-                  <input type="text" class="form-control form-control-border border-width-2" placeholder="นามสกุล" name="lname" id="lname">
+                  <input type="text" class="form-control form-control-border border-width-2" placeholder="นามสกุล (TH)" name="lname" id="lname">
                 </div>
               </div>
             </div>

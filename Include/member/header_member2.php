@@ -1,3 +1,5 @@
+<?php include "../sql/conn.php";
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="th">
 
@@ -33,7 +35,7 @@
   <link rel="stylesheet" href="../src/plugins/summernote/summernote-bs4.min.css">
   <!-- data table -->
   <link href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="../src/dist/css/adminlte.min.css">
   <link rel="icon" href="../src/dist/img/repair_systemLogo.png">
 
@@ -79,7 +81,7 @@
 
   .footer {
     text-align: center;
-    
+
   }
 
   .href {
@@ -144,21 +146,19 @@
     font-size: 12px;
   }
 
-  .main-header{
+  .main-header {
     height: 80px;
     font-size: 18px;
   }
 
-  .brand-text{
+  .brand-text {
     font-family: 'Mitr', sans-serif;
     font-weight: bold;
   }
 
-  .content-wrapper{
+  .content-wrapper {
     background-color: #E3F0FE;
   }
-
-  
 </style>
 
 <!-- Preloader -->
