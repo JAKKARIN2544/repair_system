@@ -94,7 +94,7 @@ $query = mysqli_query($conn, $sql_provinces);
                                                     <td>Mark</td>
                                                     <td>Otto</td>
                                                     <td>@mdo</td>
-                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center"><i class="fas fa-users"></i><span> user</span></td>
                                                     <td class="text-center">
                                                         <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
                                                         <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
@@ -106,7 +106,7 @@ $query = mysqli_query($conn, $sql_provinces);
                                                     <td>Jacob</td>
                                                     <td>tdornton</td>
                                                     <td>@fat</td>
-                                                    <td class="text-center"> <small class="badge badge-danger">ยกเลิกซ่อม</small></td>
+                                                    <td class="text-center text-danger"><i class="fas fa-user-shield"></i><span> admin</span></td>
                                                     <td class="text-center">
                                                         <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
                                                         <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
@@ -118,7 +118,7 @@ $query = mysqli_query($conn, $sql_provinces);
                                                     <td>Larry</td>
                                                     <td>the Bird</td>
                                                     <td>@twitter</td>
-                                                    <td class="text-center"><small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center text-info"><i class="fas fa-user-tie"></i><span> authorities</span></td>
                                                     <td class="text-center">
                                                         <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
                                                         <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
@@ -221,9 +221,9 @@ $query = mysqli_query($conn, $sql_provinces);
                                                         <label for="exampleInputzip_code">สถานะ<a class="text-danger">*</a></label>
                                                         <select class="custom-select" name="sex" id="sex">
                                                             <option value="" disabled selected hidden>เลือกสถานะผู้ใช้งาน</option>
-                                                            <option>admin</option>
-                                                            <option>authorities</option>
-                                                            <option>member</option>
+                                                            <option class="text-danger">admin</option>
+                                                            <option class="text-info">authorities</option>
+                                                            <option class="text-dark">member</option>
                                                         </select>
                                                     </div>
                                                 </div>

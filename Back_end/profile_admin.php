@@ -1,4 +1,5 @@
-<?php include "../Include/admin/header_amin.php";
+<?php
+include "../Include/admin/header_amin.php";
 include "../Include/admin/menu_admin.php"
 ?>
 <div class="content-wrapper">
@@ -9,9 +10,19 @@ include "../Include/admin/menu_admin.php"
                         <div class="card-body row">
                                 <div class="col-5 text-center d-flex align-items-center justify-content-center">
                                         <div class="">
-                                                <div class="img1">
-                                                        <img src="../src/dist/img/profile/profile1.png" class="img5" alt="">
-                                                </div>
+                                                <?php
+                                                if (($_SESSION["level"]) == "admin") { //ถ้ายังไม่ได้ Login จะโชว์สองลิงค์ด้านล่าง
+                                                        echo '<div class="img1">';
+                                                        echo '<img src="../src/dist/img/profile/profile1.png" class="img5" alt="">';
+                                                        echo '</div>';
+                                                ?>
+                                                <?php
+                                                } else if (($_SESSION["level"]) == "authorities") {
+                                                        echo '<div class="img1">';
+                                                        echo '<img src="../src/dist/img/profile/profile5.png" class="img5" alt="">';
+                                                        echo '</div>';
+                                                }
+                                                ?>
                                                 <h2><?php echo  $_SESSION['name']; ?></h2>
                                                 <p class="lead mb-5"><?php echo  $_SESSION['email']; ?>
                                                         <br>

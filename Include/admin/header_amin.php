@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="../src/plugins/summernote/summernote-bs4.min.css">
   <!-- data table -->
   <link href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="../src/dist/css/adminlte.min.css">
   <link rel="icon" href="../src/dist/img/repair_systemLogo.png">
 
@@ -54,8 +54,18 @@
 
   .online {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 14px;
     color: #00FF00;
+  }
+
+  .offline {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    color: #808080;
   }
 
   .username {
@@ -152,11 +162,19 @@
   .aa1 {
     font-size: 12px;
   }
-  .card1{
-      text-align: center;
+
+  .card1 {
+    text-align: center;
   }
-  .img5{
-    width: 50%;
+
+  .img5 {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .brand-text{
+    font-family: 'Mitr', sans-serif;
   }
 </style>
 

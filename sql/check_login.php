@@ -1,11 +1,23 @@
-<?php session_start(); 
-        include("conn.php");
+<?php session_start();
+include("conn.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
   <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+
+  <style>
+    .swal2-popup {
+      font-family: 'Mitr', sans-serif !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -58,6 +70,23 @@
                 }).then((result) => {
             if (result.isDismissed) {
                 window.location.href = "../index.php";
+            }
+          });
+        </script>';
+      }
+      //------------------------------------------------ authorities -----------------------------------------------------------------------
+      if ($_SESSION["level"] == "authorities") {
+        echo '
+        <script type="text/javascript">
+                Swal.fire({
+                    icon: "success",
+                    title: "สำเร็จ",
+                    text: "กำลังเข้าสู่ระบบ",
+                    showConfirmButton: false,
+                    timer: 3000
+                }).then((result) => {
+            if (result.isDismissed) {
+                window.location.href = "../Back_end/dashboard.php";
             }
           });
         </script>';

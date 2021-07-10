@@ -15,7 +15,7 @@ include '../sql/check_session.php';
                     <a href="../Back_end/dashboard.php" class="nav-link">หน้าหลัก</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">ติดต่อ</a>
+                    <a href="#" class="nav-link">คู่มือการใช้งาน</a>
                 </li>
                 <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
@@ -77,11 +77,29 @@ include '../sql/check_session.php';
 
             <!-- Sidebar -->
             <div class="sidebar">
+            <br>
                 <!-- Sidebar user panel (optional) -->
-                <div class="img1">
-                    <img src="../src/dist/img/profile/profile1.png" class="img2" alt="">
-                </div>
-                <div class="online "> <i class="fas fa-circle"></i> online</div>
+                <div class="img5">
+                    <?php
+                    if (($_SESSION["level"]) == "admin") { //ถ้ายังไม่ได้ Login จะโชว์สองลิงค์ด้านล่าง
+                        echo '<img src="../src/dist/img/profile/profile1.png" class="img5" alt="">';
+                    ?>
+                    <?php
+                    } else if (($_SESSION["level"]) == "authorities") {
+                        echo '<img src="../src/dist/img/profile/profile5.png" class="img5" alt="">';
+                    }
+                    ?>
+                    </div>
+                    
+                    <?php
+					if(!isset($_SESSION["username"])){ //ถ้ายังไม่ได้ Login จะโชว์สองลิงค์ด้านล่าง
+                ?>
+                 <div class="offline"> <i class="fas fa-circle"></i> offline</div>
+                <?php
+                    }else{
+                    echo '<div class="online"> <i class="fas fa-circle"></i> online</div>';
+            }
+            ?> 
                 <div class="username">
                     <i class="hi">Hi.</i> <a class="hi2 text-warning" href="#"> <?php echo  $_SESSION['name']; ?></a>
                 </div>

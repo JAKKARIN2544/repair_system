@@ -2,7 +2,18 @@
 <html lang="en">
 
 <head>
-<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+  <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+  <style>
+    .swal2-popup {
+      font-family: 'Mitr', sans-serif !important;
+    }
+  </style>
 </head>
 
 <body>
