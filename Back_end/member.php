@@ -1,5 +1,6 @@
 <?php include "../Include/admin/header_amin.php";
 include "../Include/admin/menu_admin.php";
+include "../sql/count_sql.php";
 ?>
 <?php
 $servername = "localhost";
@@ -15,6 +16,9 @@ if (!$conn) {
 }
 $sql_provinces = "SELECT * FROM provinces";
 $query = mysqli_query($conn, $sql_provinces);
+
+$sql = "SELECT * FROM tb_user";
+$result = mysqli_query($conn, $sql);
 ?>
 
 <div class="content-wrapper">
@@ -24,7 +28,7 @@ $query = mysqli_query($conn, $sql_provinces);
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>
-                        ผู้ใช้งานทั้งหมด <a class="date text-dark" id="Date"></a> <span class="co-sm right badge badge-info">200 คน </span>
+                        ผู้ใช้งานทั้งหมด <a class="date text-dark" id="Date"></a> <span class="co-sm right badge badge-info"><?php echo $row_countuser['COUNT(id)'] ?> คน </span>
                     </h1>
                 </div>
                 <div class="col-sm-6">
@@ -40,20 +44,44 @@ $query = mysqli_query($conn, $sql_provinces);
     <section class="content">
         <!-- Info boxes -->
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4">
+            <div class="col-md-4">
                 <div class="info-box">
-                    <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user"></i></span>
-
+                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users-cog"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">จำนวนผู้ใช้งาน</span>
+                        <span class="info-box-text">จำนวน แอดมิน</span>
                         <span class="info-box-number">
-                            10
+                            <?php echo $row_countadmin['level'] ?>
                             <small>คน</small>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box -->
+            </div>
+            <div class="col-md-4">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">จำนวน เจ้าหน้าที่</span>
+                        <span class="info-box-number">
+                        <?php echo $row_countauthorities['level'] ?>
+                            <small>คน</small>
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box">
+                    <span class="info-box-icon bg-dark elevation-1"><i class="fas fa-user"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">จำนวน ผู้ใช้งาน</span>
+                        <span class="info-box-number">
+                        <?php echo $row_countmember['level'] ?>
+                            <small>คน</small>
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
             </div>
             <!-- /.col -->
         </div>
@@ -80,51 +108,48 @@ $query = mysqli_query($conn, $sql_provinces);
                                         <table class="table table-hover text-nowrap" id="MyTable">
                                             <thead class="">
                                                 <tr>
-                                                    <th class="text-center" scope="col">รหัสแจ้งซ่อม</th>
+                                                    <th class="text-center" scope="col">รหัสผู้ใช้งาน</th>
+                                                    <th class="text-center" scope="col">E-mail</th>
                                                     <th class="text-center" scope="col">ชื่อ - นามสกุล</th>
-                                                    <th class="text-center" scope="col">วันที่แจ้งซ่อม</th>
-                                                    <th class="text-center" scope="col">อาการเสีย ชำรุด</th>
-                                                    <th class="text-center" scope="col">สถานะ</th>
+                                                    <th class="text-center" scope="col">เบอร์โทรศัพท์</th>
+                                                    <th class="text-center" scope="col">สถานะผู้ใช้งาน</th>
                                                     <th class="text-center" scope="col">จัดการ</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                    <td class="text-center"><i class="fas fa-users"></i><span> user</span></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Jacob</td>
-                                                    <td>tdornton</td>
-                                                    <td>@fat</td>
-                                                    <td class="text-center text-danger"><i class="fas fa-user-shield"></i><span> admin</span></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                    <td class="text-center text-info"><i class="fas fa-user-tie"></i><span> authorities</span></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
-                                                    </td>
-                                                </tr>
+                                                <?php
+                                                if (mysqli_num_rows($result) > 0) {
+                                                    // output data of each row
+                                                    while ($row = mysqli_fetch_assoc($result)) {
+                                                ?>
+                                                        <tr>
+                                                            <td class="text-center"><?php echo $row['id'] ?></td>
+                                                            <td><?php echo $row['email'] ?></td>
+                                                            <td><?php echo $row['fname'] ?> <?php echo $row['lname'] ?></td>
+                                                            <td><?php echo $row['tel'] ?></td>
+                                                                <?php 
+                                                                    if ($row['level'] == "admin") {
+                                                                     echo '<td class="text-center text-danger"><i class="fas fa-user-shield"></i><span> admin</span></td>';       
+                                                                    }
+                                                                    else if($row['level'] == "authorities"){
+                                                                    echo '<td class="text-center text-info"><i class="fas fa-user-tie"></i><span> authorities</span></td>';
+                                                                    }
+                                                                    else{
+                                                                        echo '<td class="text-center"><i class="fas fa-users"></i><span> user</span></td>';
+                                                                    }
+                                                                ?>
+                                                            <td class="text-center">
+                                                                <a class="btn1 btn btn-info" href="#" target=""><i class="fas fa-info"></i> เพิ่มเติม</a>
+                                                                <a class="btn1 btn btn-warning" href="#" target=""><i class="fas fa-pencil-alt"></i> แก้ไข</a>
+                                                                <a class="btn1 btn btn-danger" href="#" target=""><i class="fas fa-times"></i> ลบ</a>
+                                                            </td>
+                                                        </tr>
+                                                <?php
+                                                    }
+                                                } else {
+                                                    echo "0 results";
+                                                }
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
