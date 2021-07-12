@@ -1,5 +1,5 @@
-<?php include "../Include/admin/header_amin.php";
-include "../Include/admin/menu_admin.php"
+<?php include '../Include/admin/header_amin.php';
+include '../Include/admin/menu_admin.php';
 ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -43,7 +43,10 @@ include "../Include/admin/menu_admin.php"
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                        <td class="text-center">RP<?php echo rand(
+                                            100000,
+                                            999999
+                                        ); ?></td>
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>@mdo</td>
@@ -55,7 +58,10 @@ include "../Include/admin/menu_admin.php"
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                        <td class="text-center">RP<?php echo rand(
+                                            100000,
+                                            999999
+                                        ); ?></td>
                                         <td>Jacob</td>
                                         <td>tdornton</td>
                                         <td>@fat</td>
@@ -67,7 +73,10 @@ include "../Include/admin/menu_admin.php"
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
+                                        <td class="text-center">RP<?php echo rand(
+                                            100000,
+                                            999999
+                                        ); ?></td>
                                         <td>Larry</td>
                                         <td>the Bird</td>
                                         <td>@twitter</td>
@@ -93,7 +102,7 @@ include "../Include/admin/menu_admin.php"
     <!-- /.content -->
 </div>
 
-<?php include "../Include/admin/footer_admin.php"; ?>
+<?php include '../Include/admin/footer_admin.php'; ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

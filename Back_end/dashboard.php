@@ -1,5 +1,5 @@
-<?php include "../Include/admin/header_amin.php";
-include "../Include/admin/menu_admin.php"
+<?php include '../Include/admin/header_amin.php';
+include '../Include/admin/menu_admin.php';
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="div-all">
@@ -267,4 +267,4 @@ include "../Include/admin/menu_admin.php"
     </div>
     <!-- /.content-wrapper -->
 </div>
-<?php include "../Include/admin/footer_admin.php"; ?>
+<?php include '../Include/admin/footer_admin.php'; ?>
