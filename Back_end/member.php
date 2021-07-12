@@ -118,7 +118,7 @@ $result = mysqli_query($conn, $sql);
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                if (mysqli_num_rows($result) > 0) {
+                                                if (mysqli_num_rows($result) > 1) {
                                                     // output data of each row
                                                     while ($row = mysqli_fetch_assoc($result)) {
                                                 ?>
@@ -126,10 +126,10 @@ $result = mysqli_query($conn, $sql);
                                                             <td class="text-center"><?php echo $row['id'] ?></td>
                                                             <td><?php echo $row['email'] ?></td>
                                                             <td><?php echo $row['fname'] ?> <?php echo $row['lname'] ?></td>
-                                                            <td><?php echo $row['tel'] ?></td>
+                                                            <td><?php echo $row['phone'] ?></td>
                                                                 <?php 
                                                                     if ($row['level'] == "admin") {
-                                                                     echo '<td class="text-center text-danger"><i class="fas fa-user-shield"></i><span> admin</span></td>';       
+                                                                    echo '<td class="text-center text-danger"><i class="fas fa-user-shield"></i><span> admin</span></td>';       
                                                                     }
                                                                     else if($row['level'] == "authorities"){
                                                                     echo '<td class="text-center text-info"><i class="fas fa-user-tie"></i><span> authorities</span></td>';

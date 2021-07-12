@@ -1,6 +1,12 @@
 <?php include '../Include/admin/header_amin.php';
 include '../Include/admin/menu_admin.php';
 ?>
+<?php
+include "../sql/conn.php";
+$sql = "SELECT * FROM tb_user";
+$result = mysqli_query($conn, $sql);
+include "../sql/count_sql.php";
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="div-all">
     <div class="content-wrapper">
@@ -32,7 +38,7 @@ include '../Include/admin/menu_admin.php';
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h2>150</h2>
+                                <h2><?php echo $row_countuser['COUNT(id)'] ?></h2>
 
                                 <p>ผู้ใช้งาน</p>
                             </div>
