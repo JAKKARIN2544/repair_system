@@ -131,4 +131,4 @@ include "Include/member/menu_member.php";
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
- <?php include "Include/member/footer_member.php"; ?>
+<?php include "Include/member/footer_member.php"; ?>
