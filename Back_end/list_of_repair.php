@@ -8,7 +8,8 @@ include "../Include/admin/menu_admin.php"
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>
-                        รายการรับซ่อมทั้งหมด<a class="date text-dark" id="Date"></a> <span class="co-sm right badge badge-success">200 รายการ </span>
+                        รายการรับซ่อมทั้งหมด<a class="date text-dark" id="Date"></a> <span
+                            class="co-sm right badge badge-success">200 รายการ </span>
                     </h1>
                 </div>
                 <div class="col-sm-6">
@@ -47,11 +48,14 @@ include "../Include/admin/menu_admin.php"
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>@mdo</td>
-                                        <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                        <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small>
+                                        </td>
                                         <td class="text-center">
-                                            <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                            <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-print"></i> พิมพ์</a>
-                                           
+                                            <a class="btn1 btn btn-warning" href="#" target="_blank"><i
+                                                    class="fas fa-info"></i> รายละเอียด</a>
+                                            <a class="btn1 btn btn-success" href="#" target="_blank"><i
+                                                    class="fas fa-print"></i> พิมพ์</a>
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -59,11 +63,14 @@ include "../Include/admin/menu_admin.php"
                                         <td>Jacob</td>
                                         <td>tdornton</td>
                                         <td>@fat</td>
-                                        <td class="text-center"> <small class="badge badge-danger">ยกเลิกซ่อม</small></td>
+                                        <td class="text-center"> <small class="badge badge-danger">ยกเลิกซ่อม</small>
+                                        </td>
                                         <td class="text-center">
-                                            <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                            <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-print"></i> พิมพ์</a>
-                                           
+                                            <a class="btn1 btn btn-warning" href="#" target="_blank"><i
+                                                    class="fas fa-info"></i> รายละเอียด</a>
+                                            <a class="btn1 btn btn-success" href="#" target="_blank"><i
+                                                    class="fas fa-print"></i> พิมพ์</a>
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -71,11 +78,14 @@ include "../Include/admin/menu_admin.php"
                                         <td>Larry</td>
                                         <td>the Bird</td>
                                         <td>@twitter</td>
-                                        <td class="text-center"><small class="badge badge-success">กำลังซ่อม</small></td>
+                                        <td class="text-center"><small class="badge badge-success">กำลังซ่อม</small>
+                                        </td>
                                         <td class="text-center">
-                                            <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                            <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-print"></i> พิมพ์</a>
-                                           
+                                            <a class="btn1 btn btn-warning" href="#" target="_blank"><i
+                                                    class="fas fa-info"></i> รายละเอียด</a>
+                                            <a class="btn1 btn btn-success" href="#" target="_blank"><i
+                                                    class="fas fa-print"></i> พิมพ์</a>
+
                                         </td>
                                     </tr>
                                 </tbody>
@@ -99,33 +109,33 @@ include "../Include/admin/menu_admin.php"
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#MyTable').DataTable({
-            responsive: true,
-            language: {
-                "decimal": "",
-                "emptyTable": "ไม่มีข้อมูลในตาราง",
-                "info": "แสดงแถวที่ _START_ ถึง _END_ ของ _TOTAL_ แถว",
-                "infoEmpty": "แสดงแถวที่ 0 ถึง 0 ของ 0 แถว",
-                "infoFiltered": "(จากทั้งหมด _MAX_  แถว)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "แสดง _MENU_ แถว ต่อหน้า",
-                "loadingRecords": "กรุณารอสักครู่....",
-                "processing": "กำลังประมวลผล...",
-                "search": "ค้าหารายการ ซ่อม :",
-                "zeroRecords": "ไม่พอข้อมูลการ แจ้งซ่อม",
-                "paginate": {
-                    "first": "หน้าแรก",
-                    "last": "หน้าสุดท้าย",
-                    "next": "ถัดไป",
-                    "previous": "ก่อนหน้า"
-                },
-                "aria": {
-                    "sortAscending": ": เปิดใช้งานเพื่อจัดเรียงคอลัมน์จากน้อยไปมาก",
-                    "sortDescending": ": เปิดใช้งานเพื่อจัดเรียงคอลัมน์จากมากไปน้อย"
-                }
+$(document).ready(function() {
+    $('#MyTable').DataTable({
+        responsive: true,
+        language: {
+            "decimal": "",
+            "emptyTable": "ไม่มีข้อมูลในตาราง",
+            "info": "แสดงแถวที่ _START_ ถึง _END_ ของ _TOTAL_ แถว",
+            "infoEmpty": "แสดงแถวที่ 0 ถึง 0 ของ 0 แถว",
+            "infoFiltered": "(จากทั้งหมด _MAX_  แถว)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "แสดง _MENU_ แถว ต่อหน้า",
+            "loadingRecords": "กรุณารอสักครู่....",
+            "processing": "กำลังประมวลผล...",
+            "search": "ค้าหารายการ ซ่อม :",
+            "zeroRecords": "ไม่พอข้อมูลการ แจ้งซ่อม",
+            "paginate": {
+                "first": "หน้าแรก",
+                "last": "หน้าสุดท้าย",
+                "next": "ถัดไป",
+                "previous": "ก่อนหน้า"
+            },
+            "aria": {
+                "sortAscending": ": เปิดใช้งานเพื่อจัดเรียงคอลัมน์จากน้อยไปมาก",
+                "sortDescending": ": เปิดใช้งานเพื่อจัดเรียงคอลัมน์จากมากไปน้อย"
             }
-        });
+        }
     });
+});
 </script>
