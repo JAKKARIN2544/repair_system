@@ -102,7 +102,7 @@ include 'conn.php';
         <script type="text/javascript">
                 Swal.fire({
                     icon: "error",
-                    title: "ผิดพลาด",
+                    title: "เข้าสู่ระบบไม่สำเร็จ !!!!",
                     text: "เข้าสู่ระบบไม่สำเร็จ กรุณาตรวจสอบ username และ password อีกครั้ง !!!",
                     showConfirmButton: false,
                     footer: "",
@@ -120,7 +120,7 @@ include 'conn.php';
         <script type="text/javascript">
                 Swal.fire({
                     icon: "error",
-                    title: "ผิดพลาด",
+                    title: "เข้าสู่ระบบไม่สำเร็จ !!!!",
                     text: "เข้าสู่ระบบไม่สำเร็จ กรุณาตรวจสอบ username และ password อีกครั้ง !!!",
                     footer: "",
                     showConfirmButton: false,

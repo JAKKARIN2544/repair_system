@@ -1,23 +1,21 @@
-<?php include "../Include/login/header_register.php"; ?>
+<?php include '../Include/login/header_register.php'; ?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "12345678";
-$dbname = "db_repair_system";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
+$servername = 'localhost';
+$username = 'root';
+$password = '12345678';
+$dbname = 'db_repair_system';
+$conn = mysqli_connect($servername, $username, $password, $dbname); // Check connection
 if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+    die('Connection failed: ' . mysqli_connect_error());
 }
-$sql_provinces = "SELECT * FROM provinces";
+$sql_provinces = 'SELECT * FROM provinces';
 $query = mysqli_query($conn, $sql_provinces);
 ?>
 
 <body class="hold-transition register-page">
   <div class="register-box">
     <div class="card card-outline card-primary">
-      <a href="./Login/register.php" class="h3 text-dark text-center"><img class="img" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="50" width="50"> <b class="rainbow rainbow_text_animated">REPAIR</b> SYSTEM</a>
+      <a href="../Login/register.php" class="h3 text-dark text-center"><img class="img" src="../src/dist/img/repair_systemLogo.png" alt="AdminLTELogo" height="50" width="50"> <b class="rainbow rainbow_text_animated">REPAIR</b> SYSTEM</a>
       <div class="card-body">
       <div class="login-box-msg text-dark"><span class="icon fas fa-exclamation-triangle"></span> กรุณา สมัครสมาชิก ก่อนเข้าใช้งาน <a class="text-danger">!!!!!</a></div>
         <div class="container">
@@ -117,7 +115,9 @@ $query = mysqli_query($conn, $sql_provinces);
                   <select class="custom-select form-control-border border-width-2" name="provinces" id="provinces">
                     <option value="" disabled selected hidden>เลือก จังหวัด</option>
                     <?php foreach ($query as $value) { ?>
-                      <option value="<?= $value['id'] ?>"><?= $value['name_th'] ?></option>
+                      <option value="<?= $value['id'] ?>"><?= $value[
+    'name_th'
+] ?></option>
                     <?php } ?>
                   </select>
                 </div>
@@ -172,8 +172,8 @@ $query = mysqli_query($conn, $sql_provinces);
     </div><!-- /.card -->
   </div>
   <!-- /.register-box -->
-  <?php include "../Include/login/footer_register.php"; ?>
-  <?php include "../src/script/script.php"; ?>
+  <?php include '../Include/login/footer_register.php'; ?>
+  <?php include '../src/script/script.php'; ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript">
     $(function() {

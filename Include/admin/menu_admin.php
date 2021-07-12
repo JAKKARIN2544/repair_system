@@ -11,7 +11,7 @@
                     <a href="../Back_end/dashboard.php" class="nav-link">หน้าหลัก</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">คู่มือการใช้งาน</a>
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#modal-lg" >คู่มือการใช้งาน</a>
                 </li>
                 <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
@@ -221,3 +221,21 @@
             </div>
             <!-- /.sidebar -->
         </aside>
+
+        <div class="modal fade" id="modal-lg">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">คู่มือการใช้งาน</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">ยังไม่พร้อมใช้งานในส่วนนี้</p>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
