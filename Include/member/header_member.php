@@ -9,6 +9,7 @@
   <title>Repair | System</title>
 
   <!-- Google Font: Source Sans Pro -->
+  <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,6 +39,11 @@
   
   <link rel="stylesheet" href="src/dist/css/adminlte.min.css">
   <link rel="icon" href="src/dist/img/repair_systemLogo.png">
+  <style>
+    .swal2-popup {
+      font-family: 'Mitr', sans-serif !important;
+    }
+  </style>
 
 </head>
 <style>
