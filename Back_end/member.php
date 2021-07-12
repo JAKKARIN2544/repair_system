@@ -139,9 +139,9 @@ $result = mysqli_query($conn, $sql);
                                                                     }
                                                                 ?>
                                                             <td class="text-center">
-                                                                <a class="btn1 btn btn-info" href="#" target=""><i class="fas fa-info"></i> เพิ่มเติม</a>
-                                                                <a class="btn1 btn btn-warning" href="#" target=""><i class="fas fa-pencil-alt"></i> แก้ไข</a>
-                                                                <a class="btn1 btn btn-danger" href="#" target=""><i class="fas fa-times"></i> ลบ</a>
+                                                                <a type="button" class="btn btn-info view-data" id = "<?php echo $row['id'] ?>"><i class="fas fa-info"></i> เพิ่มเติม</a>
+                                                                <a type="button" class="btn btn-warning" href="#" target=""><i class="fas fa-pencil-alt"></i> แก้ไข</a>
+                                                                <a type="button" class="btn btn-danger" href="#" target=""><i class="fas fa-times"></i> ลบ</a>
                                                             </td>
                                                         </tr>
                                                 <?php
@@ -274,9 +274,27 @@ $result = mysqli_query($conn, $sql);
 </div>
 <?php include "../Include/admin/footer_admin.php"; ?>
 <?php include "../src/script/script.php"; ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<?php require '../src/modal/Modal_member.php';?>
+<script>
+$(document).ready(function(){
+    $('.view-data').click(function(){
+        var member_id = $(this).attr("id");
+        $.ajax({
+            url : "../sql/select_member.php",
+            method : "post",
+            data :{id:member_id},
+            success :function(data){
+                $('#detail').html(data);
+                $('#Modal_member').modal('show');
+            }
+        });
+    });
+});
+</script>
 <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
