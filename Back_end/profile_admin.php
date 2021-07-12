@@ -28,7 +28,7 @@ include "../Include/admin/menu_admin.php"
                                                         <br>
                                                         <?php echo  $_SESSION['level']; ?>
                                                         <br>
-                                                        เบอร์โทรศัพท์ : <?php echo  $_SESSION['tel']; ?>
+                                                        เบอร์โทรศัพท์ : <?php echo  $_SESSION['phone']; ?>
                                                 </p>
                                         </div>
                                 </div>
