@@ -37,7 +37,7 @@ include("conn.php");
       $_SESSION["username"] = $row["username"];
       $_SESSION["name"] = $row["fname"] . " " . $row["lname"];
       $_SESSION["level"] = $row["level"];
-      $_SESSION["tel"] = $row["tel"];
+      $_SESSION["phone"] = $row["phone"];
       $_SESSION["gender"] = $row["gender"];
       $_SESSION["email"] = $row["email"];
       //------------------------------------------------ ADMIN -----------------------------------------------------------------------
