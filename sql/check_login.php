@@ -6,32 +6,28 @@ include 'conn.php';
 <title>Repair | System</title>
 
 <head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
-  <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 
-  <style>
+    <style>
     .swal2-popup {
-      font-family: 'Mitr', sans-serif !important;
+        font-family: 'Mitr', sans-serif !important;
     }
-  </style>
+    </style>
 </head>
 
 <body>
-  <?php if (isset($_POST['username'])) {
+    <?php if (isset($_POST['username'])) {
       $username = $_POST['username'];
       $password = MD5($_POST['password']);
 
       $sql =
-          "SELECT * FROM tb_user WHERE  username = '" .
-          $username .
-          "' AND  password = '" .
-          $password .
-          "' ";
+          "SELECT * FROM tb_user WHERE  username = '" .$username ."' AND  password = '" .$password ."' ";
       $result = mysqli_query($conn, $sql);
 
       if (mysqli_num_rows($result) == 1) {

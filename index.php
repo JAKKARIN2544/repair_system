@@ -29,12 +29,13 @@ include "Include/member/menu_member.php";
                             <?php
 					            if(!isset($_SESSION["username"])){ //ถ้ายังไม่ได้ Login จะโชว์สองลิงค์ด้านล่าง
                             ?>
-                            <h1 class="text-center">กรุณา <a class="text-danger" href="Login/login.php">ล็อกอิน</a> ก่อนเข้าใช้งาน !!!</a></h1>
+                            <h1 class="text-center">กรุณา <a class="text-danger" href="Login/login.php">ล็อกอิน</a>
+                                ก่อนเข้าใช้งาน !!!</a></h1>
                             <?php
                             }else{
                             echo '<h1 class="text-center">ยินดีต้อนรับ คุณ. <a class="text-warning" href="">' . $_SESSION['name'] . '</a></h1> ';
                             }
-                            ?> 
+                            ?>
                             <br>
                             <p class="card-text">
                             <div id="demo" class="carousel slide" data-ride="carousel">
@@ -72,7 +73,8 @@ include "Include/member/menu_member.php";
                                         <div class="col-sm-1"></div>
                                         <div class="col-sm-10">
                                             <div class="input-group">
-                                                <input type="search" class="form-control form-control-lg" placeholder="ค้นหา">
+                                                <input type="search" class="form-control form-control-lg"
+                                                    placeholder="ค้นหา">
                                                 <div class="input-group-append">
                                                     <button type="submit" class="btn btn-lg btn-default">
                                                         <i class="fa fa-search"></i>
@@ -114,10 +116,10 @@ include "Include/member/menu_member.php";
                                     </div>
                                     <div class="col-sm-6">
                                         <a href="Front_end/follow_up_repair.php">
-                                        <img src="src/dist/img/follow.png" alt="" width="140" height="147">
-                                        <div>
-                                            <h1>ติดตามการซ่อม</h1>
-                                        </div>
+                                            <img src="src/dist/img/follow.png" alt="" width="140" height="147">
+                                            <div>
+                                                <h1>ติดตามการซ่อม</h1>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -131,4 +133,4 @@ include "Include/member/menu_member.php";
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-<?php include "Include/member/footer_member.php"; ?>
+    <?php include "Include/member/footer_member.php"; ?>

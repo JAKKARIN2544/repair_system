@@ -1,12 +1,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
   $('#provinces').change(function() {
-    var id_province = $(this).val();
+    var name_th = $(this).val();
 
       $.ajax({
       type: "POST",
       url: "../sql/ajax_db.php",
-      data: {id:id_province,function:'provinces'},
+      data: {name_th:name_th,function:'provinces'},
       success: function(data){
           $('#amphures').html(data); 
           $('#districts').html(' '); 

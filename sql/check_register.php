@@ -3,12 +3,12 @@
 <html lang="en">
 
 <head>
-  <title>Repair | System</title>
-  <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+    <title>Repair | System</title>
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 </head>
 
 <body>
-  <?php
+    <?php
   $housenumber = $_POST['housenumber'];
   $moo = $_POST['moo'];
   $provinces = $_POST['provinces'];

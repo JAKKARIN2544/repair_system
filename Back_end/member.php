@@ -202,7 +202,7 @@ $result = mysqli_query($conn, $sql);
                                                         <select class="custom-select" name="Ref_prov_id" id="provinces">
                                                             <option value="" disabled selected hidden>กรุณาเลือกจังหวัด</option>
                                                             <?php foreach ($query as $value) { ?>
-                                                                <option value="<?= $value['id'] ?>"><?= $value['name_th'] ?></option>
+                                                                <option value="<?= $value['name_th'] ?>"><?= $value['name_th'] ?></option>
                                                             <?php } ?>
                                                         </select>
                                                     </div>
