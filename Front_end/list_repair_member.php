@@ -224,6 +224,38 @@ include "../Include/member/menu_member2.php";
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <tr>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                            <td class="text-danger">not data !!!</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
