@@ -3,17 +3,7 @@ include "../Include/admin/menu_admin.php";
 include "../sql/count_sql.php";
 ?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "12345678";
-$dbname = "db_repair_system";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+ include "../sql/conn.php";
 $sql_provinces = "SELECT * FROM provinces";
 $query = mysqli_query($conn, $sql_provinces);
 

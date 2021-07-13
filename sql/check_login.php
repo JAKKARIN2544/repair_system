@@ -51,7 +51,7 @@ include 'conn.php';
                 Swal.fire({
                     icon: "success",
                     title: "สำเร็จ",
-                    text: "กำลังเข้าสู่ระบบ",
+                    text: "กำลังเข้าสู่ระบบ กรุณารอสักครู่.....",
                     footer: "",
                     showConfirmButton: false,
                     timer: 3000
@@ -69,7 +69,7 @@ include 'conn.php';
                 Swal.fire({
                     icon: "success",
                     title: "สำเร็จ",
-                    text: "กำลังเข้าสู่ระบบ",
+                    text: "กำลังเข้าสู่ระบบ กรุณารอสักครู่.....",
                     showConfirmButton: false,
                     timer: 3000
                 }).then((result) => {
@@ -86,7 +86,7 @@ include 'conn.php';
                 Swal.fire({
                     icon: "success",
                     title: "สำเร็จ",
-                    text: "กำลังเข้าสู่ระบบ",
+                    text: "กำลังเข้าสู่ระบบ กรุณารอสักครู่.....",
                     showConfirmButton: false,
                     timer: 3000
                 }).then((result) => {

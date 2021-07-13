@@ -35,9 +35,9 @@
                 Swal.fire({
                     icon: "success",
                     title: "ออกจากระบบ สำเร็จ",
-                    text: "",
+                    text: "กำลังออกจากระบบ กรุณารอสักครู่.....",
                     showConfirmButton: false,
-                    timer: 3000
+                    timer: 5000
                 }).then((result) => {
             if (result.isDismissed) {
                 window.location.href = "../index.php";

@@ -1,6 +1,16 @@
 <?php include "../Include/admin/header_amin.php";
 include "../Include/admin/menu_admin.php"
 ?>
+<?php
+include "../sql/count_sql.php";
+ include "../sql/conn.php";
+$sql_provinces = "SELECT * FROM provinces";
+$query = mysqli_query($conn, $sql_provinces);
+
+
+$sql = "SELECT id,email,fname,lname,phone,level FROM tb_user WHERE level BETWEEN 'admin' AND 'authorities'";
+$result = mysqli_query($conn, $sql);
+?>
 <div class="content-wrapper">
     <!--  Content Header (Page header) -->
     <section class="content-header">
@@ -31,7 +41,7 @@ include "../Include/admin/menu_admin.php"
                     <div class="info-box-content">
                         <span class="info-box-text">จำนวน แอดมิน</span>
                         <span class="info-box-number">
-                            10
+                        <?php echo $row_countadmin['level'] ?>
                             <small>คน</small>
                         </span>
                     </div>
@@ -47,7 +57,7 @@ include "../Include/admin/menu_admin.php"
                     <div class="info-box-content">
                         <span class="info-box-text">จำนวน เจ้าหน้าที่</span>
                         <span class="info-box-number">
-                            10
+                        <?php echo $row_countauthorities['level'] ?>
                             <small>คน</small>
                         </span>
                     </div>
@@ -82,51 +92,48 @@ include "../Include/admin/menu_admin.php"
                                         <table class="table table-hover text-nowrap" id="MyTable">
                                             <thead class="">
                                                 <tr>
-                                                    <th class="text-center" scope="col">รหัสแจ้งซ่อม</th>
+                                                <th class="text-center" scope="col">รหัสเจ้าหน้าที่</th>
+                                                    <th class="text-center" scope="col">E-mail</th>
                                                     <th class="text-center" scope="col">ชื่อ - นามสกุล</th>
-                                                    <th class="text-center" scope="col">วันที่แจ้งซ่อม</th>
-                                                    <th class="text-center" scope="col">อาการเสีย ชำรุด</th>
-                                                    <th class="text-center" scope="col">สถานะ</th>
+                                                    <th class="text-center" scope="col">เบอร์โทรศัพท์</th>
+                                                    <th class="text-center" scope="col">สถานะผู้ใช้งาน</th>
                                                     <th class="text-center" scope="col">จัดการ</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            <?php
+                                                if (mysqli_num_rows($result) > 1) {
+                                                    // output data of each row
+                                                    while ($row = mysqli_fetch_assoc($result)) {
+                                                ?>
                                                 <tr>
-                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                    <td class="text-center"> <small class="badge badge-success">กำลังซ่อม</small></td>
+                                                    <td class="text-center"><?php echo $row['id'] ?></td>
+                                                    <td><?php echo $row['email'] ?></td>
+                                                    <td><?php echo $row['fname'] ?> <?php echo $row['lname'] ?></td>
+                                                    <td><?php echo $row['phone'] ?></td>
+                                                    <?php 
+                                                                    if ($row['level'] == "admin") {
+                                                                    echo '<td class="text-center text-danger"><i class="fas fa-user-shield"></i><span> admin</span></td>';       
+                                                                    }
+                                                                    else if($row['level'] == "authorities"){
+                                                                    echo '<td class="text-center text-info"><i class="fas fa-user-tie"></i><span> authorities</span></td>';
+                                                                    }
+                                                                    else{
+                                                                        echo '<td class="text-center"><i class="fas fa-users"></i><span> user</span></td>';
+                                                                    }
+                                                                ?>
                                                     <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
+                                                                <a type="button" class="btn btn-info view-data" id = "<?php echo $row['id'] ?>"><i class="fas fa-info"></i> เพิ่มเติม</a>
+                                                                <a type="button" class="btn btn-warning" href="#" target=""><i class="fas fa-pencil-alt"></i> แก้ไข</a>
+                                                                <a type="button" class="btn btn-danger" href="#" target=""><i class="fas fa-times"></i> ลบ</a>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Jacob</td>
-                                                    <td>tdornton</td>
-                                                    <td>@fat</td>
-                                                    <td class="text-center"> <small class="badge badge-danger">ยกเลิกซ่อม</small></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">RP<?php echo (rand(100000, 999999)); ?></td>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                    <td class="text-center"><small class="badge badge-success">กำลังซ่อม</small></td>
-                                                    <td class="text-center">
-                                                        <a class="btn1 btn btn-warning" href="#" target="_blank"><i class="fas fa-info"></i> รายละเอียด</a>
-                                                        <a class="btn1 btn btn-success" href="#" target="_blank"><i class="fas fa-check"></i> รับซ่อม</a>
-                                                        <a class="btn1 btn btn-danger" href="#" target="_blank"><i class="fas fa-times"></i> ยกเลิกซ่อม</a>
-                                                    </td>
-                                                </tr>
+                                                <?php
+                                                    }
+                                                } else {
+                                                    echo "0 results";
+                                                }
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -251,6 +258,26 @@ include "../Include/admin/menu_admin.php"
 </div>
 <?php include "../Include/admin/footer_admin.php"; ?>
 <?php include "../src/script/script.php"; ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<?php require '../src/modal/Modal_authorities.php';?>
+<script>
+$(document).ready(function(){
+    $('.view-data').click(function(){
+        var authorities_id = $(this).attr("id");
+        $.ajax({
+            url : "../sql/select_authorities.php",
+            method : "post",
+            data :{id:authorities_id},
+            success :function(data){
+                $('#detail').html(data);
+                $('#Modal_authorities').modal('show');
+            }
+        });
+    });
+});
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
