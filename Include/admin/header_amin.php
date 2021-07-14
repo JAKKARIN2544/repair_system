@@ -180,6 +180,9 @@ include "../sql/time_out.php";
   .brand-text{
     font-family: 'Mitr', sans-serif;
   }
+  .card-g2{
+    background-color: #DCE9FE;
+  }
 </style>
 
 <!-- Preloader -->

@@ -39,7 +39,6 @@ include "../sql/count_sql.php";
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h2><?php echo $row_countuser['COUNT(id)'] ?></h2>
-
                                 <p>ผู้ใช้งาน</p>
                             </div>
                             <div class="icon">
@@ -101,6 +100,7 @@ include "../sql/count_sql.php";
                     <!-- Left col -->
                     <section class="col-lg-7 connectedSortable">
                         <!-- Custom tabs (Charts with tabs)-->
+<!---------------------------------------------------------กราฟรายงาน การซ่อม--------------------------------------------------------------->
                         <div class="card-g1 card">
                             <div class="card-header border-0">
                                 <div class="d-flex justify-content-between">
@@ -141,12 +141,46 @@ include "../sql/count_sql.php";
                                 </div>
                             </div>
                         </div>
+<!------------------------------------------------------กราฟรายงาน ผู้ใช้งาน------------------------------------------------------------------->
+                        <div class="card-g2 card">
+                            <div class="card-header border-0">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="card-title text-danger">กราฟรายงาน ผู้ใช้งาน</h2>
+                                    <a href="">View</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <p class="d-flex flex-column">
+                                        <span class="text1 text-bold text-lg"><?php echo $row_countuser['COUNT(id)'] ?><a
+                                                class="text1">  คน</a></span>
+                                        <span>ผู้ใช้งานทั้งหมด</span>
+                                    </p>
+                                    <p class="ml-auto d-flex flex-column text-right">
+                                        <span class="text-success">
+                                            <i></i> 33.1%
+                                        </span>
+                                        <span class="text-muted">คิดเป็นเปอร์เซ็นต์</span>
+                                    </p>
+                                </div>
+                                <!-- /.d-flex -->
+
+                                <div class="position-relative mb-4">
+                                    <canvas id="sales-chart" height="200"></canvas>
+                                </div>
+
+                                <div class="d-flex flex-row justify-content-end">
+                                    <span class="mr-2">
+                                        <i class="fas fa-square text-info"></i> ผู้ใช้งาน
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                         <!-- /.card -->
                     </section>
                     <!-- /.Left col -->
                     <!-- right col (We are only adding the ID to make the widgets sortable)-->
                     <section class="col-lg-5 connectedSortable">
-
                         <div class="">
                             <!-- Info Boxes Style 2 -->
                             <div class="info-box mb-3 ">
@@ -257,12 +291,13 @@ include "../sql/count_sql.php";
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer text-center">
-                                    <a href="" class="uppercase">View All Products</a>
+                                    <a href="" class="uppercase">แสดงรายการ แจ้งซ่อมทั้งหมด</a>
                                 </div>
                                 <!-- /.card-footer -->
                             </div>
                             <!-- /.card -->
                         </div>
+
                     </section>
                     <!-- right col -->
                 </div>
