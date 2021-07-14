@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Repair | System</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
-  <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
-  <style>
-    .swal2-popup {
-      font-family: 'Mitr', sans-serif !important;
-    }
-  </style>
-</head>
-
 <?php
 //กำหนดเวลาที่สามารถอยู่ในระบบ
 $sessionlifetime = 20; //กำหนดเป็นนาที

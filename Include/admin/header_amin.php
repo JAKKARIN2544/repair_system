@@ -181,7 +181,14 @@ include "../sql/time_out.php";
     font-family: 'Mitr', sans-serif;
   }
   .card-g2{
-    background-color: #DCE9FE;
+    background-color: #CEEBFF;
+  }
+  .rroe{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .info1{
+    background-color: #4AD543  ;
   }
 </style>
 

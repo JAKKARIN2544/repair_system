@@ -97,10 +97,79 @@ include "../sql/count_sql.php";
                 <!-- /.row -->
                 <!-- Main row -->
                 <div class="row">
+                    <div class="col col-md-7">
+                        <div class="card-g1 card">
+                            <div class="card-header border-0">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="card-title text-danger">กราฟรายงาน การซ่อม</h2>
+                                    <a href="">View</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!-- /.d-flex -->
+                                <br>
+                                <div class="position-relative mb-4">
+                                    <div id="myfirstchart3" style= "height: 250px;";></div>
+                                </div>
+
+                                <div class="d-flex flex-row justify-content-end">
+                                    <span class="mr-2">
+                                        <i class="fas fa-square text-success"></i> รับซ่อม
+                                    </span>
+                                    <span class="mr-2">
+                                        <i class="fas fa-square text-warning"></i> กำลังซ่อม
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-square text-danger"></i> ยกเลิกซ่อม
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-5">
+                        <!-- Info Boxes Style 2 -->
+                        <div class="info-box mb-3 ">
+                            <span class="info-box-icon"><i class="fas fa-tools"></i></span>
+
+                            <div class="info-box-content">
+                                <h3><span class="info-box-text">รายการที่ซ่อมแล้ว</span></h3>
+                                <span class="uit info-box-number">5,200 <a class="text-dark">รายการ</a></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon"><i class="fas fa-wrench"></i></span>
+
+                            <div class="info-box-content">
+                                <h3><span class="info-box-text">กำลังดำเนินการซ่อม</span></h3>
+                                <span class="uit info-box-number">92,050 <a class="text-dark">รายการ</a></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon"><i class="fas fa-times "></i></span>
+                            <div class="info-box-content">
+                                <h3><span class="info-box-text">รายการยกเลิกซ่อม</span></h3>
+                                <span class="uit info-box-number">163,921 <a class="text-dark">รายการ</a></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!----------------------------------------------------------------------------------------------------------------------->
+                        <div class="info1 info-box mb-3">
+                            <div class="info-box-content">
+                                <h3><span class="info-box-text text-center">ยอดรวมทั้งหมด</span></h3>
+                                <span class="rroe info-box-number text-light">163,921 <span
+                                        class="text-dark">รายการ</span></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                    </div>
                     <!-- Left col -->
-                    <section class="col-lg-7 connectedSortable">
+                    <section class="col-lg-12 connectedSortable">
                         <!-- Custom tabs (Charts with tabs)-->
-<!---------------------------------------------------------กราฟรายงาน การซ่อม--------------------------------------------------------------->
+                        <!---------------------------------------------------------กราฟรายงาน การซ่อม--------------------------------------------------------------->
                         <div class="card-g1 card">
                             <div class="card-header border-0">
                                 <div class="d-flex justify-content-between">
@@ -123,9 +192,8 @@ include "../sql/count_sql.php";
                                     </p>
                                 </div>
                                 <!-- /.d-flex -->
-
                                 <div class="position-relative mb-4">
-                                    <canvas id="sales-chart" height="200"></canvas>
+                                    <div id="myfirstchart" style="height: 250px;"></div>
                                 </div>
 
                                 <div class="d-flex flex-row justify-content-end">
@@ -141,8 +209,8 @@ include "../sql/count_sql.php";
                                 </div>
                             </div>
                         </div>
-<!------------------------------------------------------กราฟรายงาน ผู้ใช้งาน------------------------------------------------------------------->
-                        <div class="card-g2 card">
+                        <!------------------------------------------------------กราฟรายงาน ผู้ใช้งาน------------------------------------------------------------------->
+                        <div class=" card">
                             <div class="card-header border-0">
                                 <div class="d-flex justify-content-between">
                                     <h2 class="card-title text-danger">กราฟรายงาน ผู้ใช้งาน</h2>
@@ -152,8 +220,9 @@ include "../sql/count_sql.php";
                             <div class="card-body">
                                 <div class="d-flex">
                                     <p class="d-flex flex-column">
-                                        <span class="text1 text-bold text-lg"><?php echo $row_countuser['COUNT(id)'] ?><a
-                                                class="text1">  คน</a></span>
+                                        <span
+                                            class="text1 text-bold text-lg"><?php echo $row_countuser['COUNT(id)'] ?><a
+                                                class="text1"> คน</a></span>
                                         <span>ผู้ใช้งานทั้งหมด</span>
                                     </p>
                                     <p class="ml-auto d-flex flex-column text-right">
@@ -166,7 +235,7 @@ include "../sql/count_sql.php";
                                 <!-- /.d-flex -->
 
                                 <div class="position-relative mb-4">
-                                    <canvas id="sales-chart" height="200"></canvas>
+                                    <div id="myfirstchart2" style="height: 250px;"></div>
                                 </div>
 
                                 <div class="d-flex flex-row justify-content-end">
@@ -181,123 +250,8 @@ include "../sql/count_sql.php";
                     <!-- /.Left col -->
                     <!-- right col (We are only adding the ID to make the widgets sortable)-->
                     <section class="col-lg-5 connectedSortable">
-                        <div class="">
-                            <!-- Info Boxes Style 2 -->
-                            <div class="info-box mb-3 ">
-                                <span class="info-box-icon"><i class="fas fa-tools"></i></span>
-
-                                <div class="info-box-content">
-                                    <h3><span class="info-box-text">รายการที่ซ่อมแล้ว</span></h3>
-                                    <span class="uit info-box-number">5,200 <a class="text-dark">รายการ</a></span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                            <div class="info-box mb-3 ">
-                                <span class="info-box-icon"><i class="fas fa-wrench"></i></span>
-
-                                <div class="info-box-content">
-                                    <h3><span class="info-box-text">กำลังดำเนินการซ่อม</span></h3>
-                                    <span class="uit info-box-number">92,050 <a class="text-dark">รายการ</a></span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                            <div class="info-box mb-3 ">
-                                <span class="info-box-icon"><i class="fas fa-times "></i></span>
-
-                                <div class="info-box-content">
-                                    <h3><span class="info-box-text">รายการยกเลิกซ่อม</span></h3>
-                                    <span class="uit info-box-number">163,921 <a class="text-dark">รายการ</a></span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                            <!-- PRODUCT LIST -->
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">รายการ แจ้งซ่อม</h3>
-
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body p-0">
-                                    <ul class="products-list product-list-in-card pl-2 pr-2">
-                                        <li class="item">
-                                            <div class="product-img">
-                                                <img src="../src/dist/img/default-150x150.png" alt="Product Image"
-                                                    class="img-size-50">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="" class="product-title">Samsung TV
-                                                    <span class="badge badge-danger float-right">ยกเลิกซ่อม</span></a>
-                                                <span class="product-description">
-                                                    Samsung 32" 1080p 60Hz LED Smart HDTV.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <!-- /.item -->
-                                        <li class="item">
-                                            <div class="product-img">
-                                                <img src="../src/dist/img/default-150x150.png" alt="Product Image"
-                                                    class="img-size-50">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="" class="product-title">Bicycle
-                                                    <span class="badge badge-danger float-right">ยกเลิกซ่อม</span></a>
-                                                <span class="product-description">
-                                                    26" Mongoose Dolomite Men's 7-speed, Navy Blue.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <!-- /.item -->
-                                        <li class="item">
-                                            <div class="product-img">
-                                                <img src="../src/dist/img/default-150x150.png" alt="Product Image"
-                                                    class="img-size-50">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="" class="product-title">
-                                                    Xbox One <span
-                                                        class="badge badge-danger float-right">ยกเลิกซ่อม</span></a>
-                                                <span class="product-description">
-                                                    Xbox One Console Bundle with Halo Master Chief Collection.
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <!-- /.item -->
-                                        <li class="item">
-                                            <div class="product-img">
-                                                <img src="../src/dist/img/default-150x150.png" alt="Product Image"
-                                                    class="img-size-50">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="" class="product-title">PlayStation 4
-                                                    <span class="badge badge-success float-right">รับซ่อม</span></a>
-                                                <span class="product-description">
-                                                    PlayStation 4 500GB Console (PS4)
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <!-- /.item -->
-                                    </ul>
-                                </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer text-center">
-                                    <a href="" class="uppercase">แสดงรายการ แจ้งซ่อมทั้งหมด</a>
-                                </div>
-                                <!-- /.card-footer -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-
+                        <!-- /.info-box -->
+                        <!-- PRODUCT LIST -->
                     </section>
                     <!-- right col -->
                 </div>
@@ -309,3 +263,4 @@ include "../sql/count_sql.php";
     <!-- /.content-wrapper -->
 </div>
 <?php include '../Include/admin/footer_admin.php'; ?>
+<?php include '../src/chart/chart.php';?>
