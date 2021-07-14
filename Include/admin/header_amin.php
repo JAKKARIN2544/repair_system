@@ -38,9 +38,8 @@ include "../sql/time_out.php";
   <link rel="stylesheet" href="../src/plugins/summernote/summernote-bs4.min.css">
   <!-- data table -->
   <link href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="../src/dist/css/adminlte.min.css">
-  <link rel="icon" href="../src/dist/img/repair_systemLogo.png">
+  <link rel="icon" href="src/dist/img/repair_systemLogo.png">
 
 </head>
 <style>

@@ -196,7 +196,7 @@
                         </li>
                         <li class="nav-header text-primary">Report</>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="../Back_end/view_report.php" class="nav-link">
                                 <i class="f3 nav-icon fas fa-file-archive"></i>
                                 <p>
                                     View Report
