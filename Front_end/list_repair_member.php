@@ -164,7 +164,7 @@ include "../Include/member/menu_member2.php";
                                             <div class="info-box-content">
                                                 <span class="info-box-text">จำนวนผู้ใช้งาน</span>
                                                 <span class="info-box-number">
-                                                    10
+                                                <span class="text-danger">not data</span>
                                                     <small>คน</small>
                                                 </span>
                                             </div>
@@ -181,7 +181,7 @@ include "../Include/member/menu_member2.php";
                                             <div class="info-box-content">
                                                 <span class="info-box-text">จำนวนเจ้าหน้าที่</span>
                                                 <span class="info-box-number">
-                                                    10
+                                                    <span class="text-danger">not data</span>
                                                     <small>คน</small>
                                                 </span>
                                             </div>
@@ -198,7 +198,7 @@ include "../Include/member/menu_member2.php";
                                             <div class="info-box-content">
                                                 <span class="info-box-text">จำนวนแอดมิน</span>
                                                 <span class="info-box-number">
-                                                    10
+                                                <span class="text-danger">not data</span>
                                                     <small>คน</small>
                                                 </span>
                                             </div>
