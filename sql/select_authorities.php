@@ -1,16 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "12345678";
-$dbname = "db_repair_system";
-
+include "../sql/conn.php";
 
 $id = $_POST['id'];
 $detail = '';
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
-$sql = "SELECT * FROM tb_authorities WHERE id = '{$id}'";
+$sql = "SELECT * FROM tb_user WHERE id = '{$id}'";
 $result = mysqli_query($conn, $sql);
 
     while ($row = mysqli_fetch_assoc($result)) {

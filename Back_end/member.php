@@ -34,9 +34,9 @@ $result = mysqli_query($conn, $sql);
     <section class="content">
         <!-- Info boxes -->
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="info-box">
-                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users-cog"></i></span>
+                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-user"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">จำนวน แอดมิน</span>
                         <span class="info-box-number">
@@ -47,7 +47,7 @@ $result = mysqli_query($conn, $sql);
                     <!-- /.info-box-content -->
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user"></i></span>
                     <div class="info-box-content">
@@ -60,7 +60,20 @@ $result = mysqli_query($conn, $sql);
                     <!-- /.info-box-content -->
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">จำนวน ช่างซ่อม</span>
+                        <span class="info-box-number">
+                        <?php echo $row_countmechanic['level'] ?>
+                            <small>คน</small>
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+            </div>
+            <div class="col-md-3">
                 <div class="info-box">
                     <span class="info-box-icon bg-dark elevation-1"><i class="fas fa-user"></i></span>
                     <div class="info-box-content">
@@ -199,11 +212,9 @@ $result = mysqli_query($conn, $sql);
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="exampleInputaddress1">จังหวัด<a class="text-danger">*</a></label>
-                                                        <select class="custom-select" name="Ref_prov_id" id="provinces">
+                                                        <select class="custom-select" name="" id="">
                                                             <option value="" disabled selected hidden>กรุณาเลือกจังหวัด</option>
-                                                            <?php foreach ($query as $value) { ?>
-                                                                <option value="<?= $value['name_th'] ?>"><?= $value['name_th'] ?></option>
-                                                            <?php } ?>
+                                    
                                                         </select>
                                                     </div>
                                                 </div>
@@ -212,14 +223,14 @@ $result = mysqli_query($conn, $sql);
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="exampleInputaddress1">อำเภอ<a class="text-danger">*</a></label>
-                                                        <select class="custom-select" name="Ref_dist_id" id="amphures">
+                                                        <select class="custom-select" name="" id="">
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="exampleInputaddress1">ตำบล<a class="text-danger">*</a></label>
-                                                        <select class="custom-select" name="Ref_subdist_id" id="districts">
+                                                        <select class="custom-select" name="" id="">
                                                         </select>
                                                     </div>
                                                 </div>
@@ -228,7 +239,7 @@ $result = mysqli_query($conn, $sql);
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="exampleInputzip_code">รหัสไปรษณีย์<a class="text-danger">*</a></label>
-                                                        <input type="text" class="form-control" name="zip_code" id="zip_code" placeholder="รหัสไปรษณีย์">
+                                                        <input type="text" class="form-control" name="" id="" placeholder="รหัสไปรษณีย์">
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -263,29 +274,8 @@ $result = mysqli_query($conn, $sql);
     <!-- /.content -->
 </div>
 <?php include "../Include/admin/footer_admin.php"; ?>
-<?php include "../src/script/script.php"; ?>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <?php require '../src/modal/Modal_member.php';?>
-<script>
-$(document).ready(function(){
-    $('.view-data').click(function(){
-        var member_id = $(this).attr("id");
-        $.ajax({
-            url : "../sql/select_member.php",
-            method : "post",
-            data :{id:member_id},
-            success :function(data){
-                $('#detail').html(data);
-                $('#Modal_member').modal('show');
-            }
-        });
-    });
-});
-</script>
-<script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#MyTable').DataTable({
@@ -316,4 +306,20 @@ $(document).ready(function(){
             }
         });
     });
+</script>
+<script>
+$(document).ready(function(){
+    $('.view-data').click(function(){
+        var member_id = $(this).attr("id");
+        $.ajax({
+            url : "../sql/select_member.php",
+            method : "post",
+            data :{id:member_id},
+            success :function(data){
+                $('#detail').html(data);
+                $('#Modal_member').modal('show');
+            }
+        });
+    });
+});
 </script>

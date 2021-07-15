@@ -4,8 +4,6 @@
       <b>Version</b> TEST 1.0
     </div>
   </footer>
-<!-- data table -->
-
 <!-- jQuery -->
 <script src="../src/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

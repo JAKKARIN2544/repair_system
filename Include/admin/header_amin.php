@@ -36,8 +36,11 @@ include "../sql/time_out.php";
   <link rel="stylesheet" href="../src/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="../src/plugins/summernote/summernote-bs4.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- data table -->
-  <link href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="../src/dist/css/adminlte.min.css">
   <link rel="icon" href="src/dist/img/repair_systemLogo.png">
 

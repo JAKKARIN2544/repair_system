@@ -1,9 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "12345678";
-$dbname = "db_repair_system";
-
+include "../sql/conn.php";
 
 $id = $_POST['id'];
 $detail = '';

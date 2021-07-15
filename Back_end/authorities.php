@@ -36,7 +36,7 @@ $result = mysqli_query($conn, $sql);
         <div class="row ">
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="info-box">
-                    <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-user"></i></span>
 
                     <div class="info-box-content">
                         <span class="info-box-text">จำนวน แอดมิน</span>
@@ -52,12 +52,27 @@ $result = mysqli_query($conn, $sql);
             <!-- /.col -->
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="info-box mb-3">
-                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-user-secret"></i></span>
+                    <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user"></i></span>
 
                     <div class="info-box-content">
                         <span class="info-box-text">จำนวน เจ้าหน้าที่</span>
                         <span class="info-box-number">
                         <?php echo $row_countauthorities['level'] ?>
+                            <small>คน</small>
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">จำนวน ช่างซ่อม</span>
+                        <span class="info-box-number">
+                        <?php echo $row_countmechanic['level'] ?>
                             <small>คน</small>
                         </span>
                     </div>
@@ -257,10 +272,6 @@ $result = mysqli_query($conn, $sql);
     <!-- /.content -->
 </div>
 <?php include "../Include/admin/footer_admin.php"; ?>
-<?php include "../src/script/script.php"; ?>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <?php require '../src/modal/Modal_authorities.php';?>
 <script>
 $(document).ready(function(){
@@ -278,9 +289,6 @@ $(document).ready(function(){
     });
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {

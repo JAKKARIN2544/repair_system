@@ -116,49 +116,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="nav-icon fas fa-tools"></i>
-                                <p>
-                                    การซ่อม
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../Back_end/notify_repair.php" class="nav-link">
-                                        <i class="fas fa-minus nav-icon"></i>
+                            <a href="../Back_end/notify_repair.php" class="nav-link">
+                            <i class="fas fa-tools nav-icon"></i>
                                         <p>แจ้งซ่อม</p>
                                         <span class="right badge badge-info">200 รายการ </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../Back_end/list_of_repair.php" class="nav-link">
-                                        <i class="fas fa-minus nav-icon"></i>
-                                        <p>รับซ่อม</p>
-                                        <span class="right badge badge-success">200 รายการ </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../Back_end/items_being_repair.php" class="nav-link">
-                                        <i class="fas fa-minus nav-icon"></i>
-                                        <p>กำลังซ่อม</p>
-                                        <span class="right badge badge-warning">200 รายการ </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../Back_end/repair_cancellation_list.php" class="nav-link">
-                                        <i class="fas fa-minus nav-icon"></i>
-                                        <p>ยกเลิกซ่อม</p>
-                                        <span class="right badge badge-danger">200 รายการ </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../Back_end/pick_up_equipment.php" class="nav-link">
-                                <i class="f1 nav-icon fas fa-toolbox"></i>
-                                <p>
-                                    เบิกอุปกรณ์
-                                </p>
                             </a>
                         </li>
                         <li class="nav-header text-success">การจัดการ</li>
@@ -179,20 +140,42 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../Back_end/list_repair.php" class="nav-link">
-                                <i class="f2 nav-icon fas fa-wrench"></i>
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-tools"></i>
                                 <p>
-                                    รายการซ่อม
+                                    จัดการ การซ่อม
                                 </p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../Back_end/equipment.php" class="nav-link">
-                                <i class="f2 nav-icon fas fa-bong"></i>
-                                <p>
-                                    จัดการ อุปกรณ์
-                                </p>
-                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../Back_end/list_of_repair.php" class="nav-link">
+                                        <i class="fas fa-minus nav-icon"></i>
+                                        <p>รับซ่อม</p>
+                                        <span class="right badge badge-info">200 รายการ </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../Back_end/items_being_repair.php" class="nav-link">
+                                        <i class="fas fa-minus nav-icon"></i>
+                                        <p>กำลังซ่อม</p>
+                                        <span class="right badge badge-warning">200 รายการ </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../Back_end/items_being_repair.php" class="nav-link">
+                                        <i class="fas fa-minus nav-icon"></i>
+                                        <p>ซ่อมสำเร็จ</p>
+                                        <span class="right badge badge-success">200 รายการ </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../Back_end/repair_cancellation_list.php" class="nav-link">
+                                        <i class="fas fa-minus nav-icon"></i>
+                                        <p>ยกเลิกซ่อม</p>
+                                        <span class="right badge badge-danger">200 รายการ </span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-header text-primary">Report</>
                         <li class="nav-item">

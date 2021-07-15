@@ -25,7 +25,7 @@ new Morris.Donut({
   ykeys: ['a','b','c'],
   labels: ['รับซ่อม', 'กำลังซ่อม', 'ยกเลิกรับซ่อม'],
   barColors : ['#28a745','#ffc107','#dc3545'],
-  resize : true
+  resize : true,
 });
 
 new Morris.Line({

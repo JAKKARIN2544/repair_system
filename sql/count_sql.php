@@ -14,9 +14,14 @@
 	$res_countauthorities = mysqli_query($conn, $sql_countauthorities);
 	$row_countauthorities = mysqli_fetch_assoc($res_countauthorities);
 
+	$sql_countmechanic = "SELECT COUNT(level) AS level FROM tb_user WHERE level = 'mechanic'";
+	$res_countmechanic = mysqli_query($conn, $sql_countmechanic);
+	$row_countmechanic = mysqli_fetch_assoc($res_countmechanic);
+
     $sql_countmember = "SELECT COUNT(level) AS level FROM tb_user WHERE level = 'member'";
 	$res_countmember = mysqli_query($conn, $sql_countmember);
 	$row_countmember = mysqli_fetch_assoc($res_countmember);
+
 
 
 
