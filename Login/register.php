@@ -114,11 +114,7 @@ $query = mysqli_query($conn, $sql_provinces);
                 <label for=""></label>
                   <select class="custom-select form-control-border border-width-2" name="provinces" id="provinces">
                     <option value="" disabled selected hidden>เลือก จังหวัด</option>
-                    <?php foreach ($query as $value) { ?>
-                      <option value="<?= $value['id'] ?>"><?= $value[
-    'name_th'
-] ?></option>
-                    <?php } ?>
+                   </option>
                   </select>
                 </div>
               </div>
@@ -173,7 +169,6 @@ $query = mysqli_query($conn, $sql_provinces);
   </div>
   <!-- /.register-box -->
   <?php include '../Include/login/footer_register.php'; ?>
-  <?php include '../src/script/script.php'; ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript">
     $(function() {

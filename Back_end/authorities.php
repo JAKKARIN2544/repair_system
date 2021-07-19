@@ -8,7 +8,7 @@ $sql_provinces = "SELECT * FROM provinces";
 $query = mysqli_query($conn, $sql_provinces);
 
 
-$sql = "SELECT id,email,fname,lname,phone,level FROM tb_user WHERE level BETWEEN 'admin' AND 'authorities'";
+$sql = "SELECT id,email,fname,lname,phone,level FROM tb_user WHERE level BETWEEN 'admin' AND 'authorities' AND 'mechanic'";
 $result = mysqli_query($conn, $sql);
 ?>
 <div class="content-wrapper">

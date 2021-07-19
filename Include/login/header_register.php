@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,6 +38,8 @@
   }
   .register-page{
     font-family: 'Mitr', sans-serif;
+    background: url("../src/dist/img/back.jpg") no-repeat center center fixed;
+    background-size: cover;
   }
   .error {
     font-family: 'Mitr', sans-serif;

@@ -92,6 +92,23 @@ include 'conn.php';
           });
         </script>';
           }
+          //------------------------------------------------ mechanic -----------------------------------------------------------------------
+          if ($_SESSION['level'] == 'mechanic') {
+            echo '
+      <script type="text/javascript">
+              Swal.fire({
+                  icon: "success",
+                  title: "สำเร็จ",
+                  text: "กำลังเข้าสู่ระบบ กรุณารอสักครู่.....",
+                  showConfirmButton: false,
+                  timer: 3000
+              }).then((result) => {
+          if (result.isDismissed) {
+              window.location.href = "../Back_end/dashboard.php";
+          }
+        });
+      </script>';
+        }
           //------------------------------------------------ ERROR LOGIN -----------------------------------------------------------------------
       } else {
           echo '
